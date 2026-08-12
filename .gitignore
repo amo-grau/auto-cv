@@ -1,0 +1,25 @@
+# Per-application material stays local: job postings, tailored documents and the
+# PDFs actually sent out are nobody's business but Oscar's.
+applications/
+
+# Scanned signature — kept local, never pushed. A fresh clone must have it
+# copied back into base/letter/ before the letter will compile.
+sig.jpg
+
+# LaTeX build artifacts
+build/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# Compiled output is never versioned
+*.pdf
