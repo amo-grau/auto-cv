@@ -32,8 +32,7 @@ Applies to CVs, letters and interviews alike.
 ## Needs confirming
 
 - **Course completion dates** — the four self-paced courses in `learning.md` are
-  still undated. The three instructor-led trainings are dated (May–June 2026);
-  **the year was assumed from context and should be confirmed once.**
+  still undated. The three instructor-led trainings are confirmed as 2026.
 - **The Cockburn training** — run by whom (his own workshop, an employer
   programme, a conference?), and is there a certificate? Worth getting right,
   because it is the strongest credential available.

@@ -8,9 +8,9 @@ grows most often.
 Stronger than online courses and worth separating from them: these were taught by
 people, not clicked through.
 
-All three fall in **May–June 2026**, which is worth using as a fact in itself: a
-concentrated, recent burst of professional development rather than a list of old
-certificates.
+All three fall in **May–June 2026** (year confirmed by the owner), which is worth
+using as a fact in itself: a concentrated, recent burst of professional development
+rather than a list of old certificates.
 
 ### Hexagonal architecture with Alistair Cockburn
 
