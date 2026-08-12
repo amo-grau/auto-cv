@@ -31,11 +31,10 @@ Applies to CVs, letters and interviews alike.
 
 ## Needs confirming
 
-- **Course completion dates** — all four self-paced courses in `learning.md` are
-  undated, and so are the three instructor-led trainings.
-- **What is the "lightning training"?** PyTorch Lightning, lightning talks, or a
-  vendor product? Unusable until confirmed — do not write it anywhere.
-- **The Cockburn training** — how long, run by whom (his own workshop, an employer
+- **Course completion dates** — the four self-paced courses in `learning.md` are
+  still undated. The three instructor-led trainings are dated (May–June 2026);
+  **the year was assumed from context and should be confirmed once.**
+- **The Cockburn training** — run by whom (his own workshop, an employer
   programme, a conference?), and is there a certificate? Worth getting right,
   because it is the strongest credential available.
 - **Teaching hexagonal architecture.** Answered: informal sessions, to help others

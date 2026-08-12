@@ -11,10 +11,13 @@ C++, Python, C#, Java, HTML and CSS.
 
 ## Frameworks and libraries
 
-- **Tags:** ros, grpc, pytorch, onnx, opencv, halcon, ocr, pandas, numpy,
-  matplotlib
+- **Tags:** ros, grpc, pytorch, onnx, opencv, halcon, ocr, machine-vision-lighting,
+  pandas, numpy, matplotlib
 
 ROS, gRPC, PyTorch, ONNX, OpenCV, HALCON, pandas, NumPy, Matplotlib.
+
+Machine vision beyond the model: trained in industrial lighting and illumination
+(LUMIMAX, 06.2026), which most vision engineers never cover.
 
 ## Tools and platforms
 

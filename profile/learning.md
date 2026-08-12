@@ -8,11 +8,15 @@ grows most often.
 Stronger than online courses and worth separating from them: these were taught by
 people, not clicked through.
 
+All three fall in **May–June 2026**, which is worth using as a fact in itself: a
+concentrated, recent burst of professional development rather than a list of old
+certificates.
+
 ### Hexagonal architecture with Alistair Cockburn
 
 - **Tags:** hexagonal-architecture, ports-and-adapters, software-architecture,
   design, training
-- **When:** ? — see `_gaps.md`
+- **When:** 18.05.2026, one week
 
 Trained in hexagonal architecture by **Alistair Cockburn, who created it**.
 
@@ -25,19 +29,27 @@ applies it, teaches it. That sequence is worth stating as a sequence.
 ### HALCON — one-week training
 
 - **Tags:** halcon, machine-vision, mvtec, training
-- **When:** ? — see `_gaps.md`
+- **When:** 04.05.2026
 
 One week of instructor-led HALCON training. **Select with care** — see the note on
 HALCON positioning below.
 
-### "Lightning" training — needs clarifying
+### Machine vision lighting — LUMIMAX
 
-- **When:** ? — see `_gaps.md`
+- **Tags:** machine-vision, lighting, illumination, optics, computer-vision,
+  industrial-vision, training
+- **When:** 23.06.2026
 
-Recorded as reported but not yet usable: it is unclear what this refers to.
-PyTorch Lightning, a lightning-talk course, or a vendor product are all plausible
-and mean entirely different things on a CV. Do not write it down anywhere until
-the owner confirms which.
+Training on **lighting for computer vision**, run by LUMIMAX.
+
+Worth more than it sounds. Illumination decides whether an industrial vision
+system works at all, and it is the part most software engineers never learn — they
+tune models against images someone else lit badly. Being able to reason about the
+lighting as well as the model is a real differentiator for vision roles, and it
+pairs with the Jetson deployment work: he can speak to the whole chain from the
+photons to the inference.
+
+Note the spelling: **lighting**, not lightning.
 
 ## Courses — self-paced
 
