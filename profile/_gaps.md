@@ -31,7 +31,13 @@ Applies to CVs, letters and interviews alike.
 
 ## Needs confirming
 
-- **Course completion dates** — all four courses in `learning.md` are undated.
+- **Course completion dates** — all four self-paced courses in `learning.md` are
+  undated, and so are the three instructor-led trainings.
+- **What is the "lightning training"?** PyTorch Lightning, lightning talks, or a
+  vendor product? Unusable until confirmed — do not write it anywhere.
+- **The Cockburn training** — how long, run by whom (his own workshop, an employer
+  programme, a conference?), and is there a certificate? Worth getting right,
+  because it is the strongest credential available.
 - **Teaching hexagonal architecture.** Answered: informal sessions, to help others
   contribute to his projects. Still open — how many people attended, and is any of
   it written down and still in use?

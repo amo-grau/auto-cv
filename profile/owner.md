@@ -40,5 +40,12 @@ shipped exactly that bug, with a `mailto:x@x.com` under a correct-looking addres
 ## Job search context
 
 - Targeting robotics and software engineering roles, primarily in Munich.
+- **Not looking for HALCON-centric work.** He has HALCON experience and a week of
+  training, and uses it on the current project, but does not want it to be the
+  core of the next role. Treat it as a capability, not a direction — details in
+  `learning.md`.
+- Three years at Yaskawa with no promotion, while doing code review, merge
+  ownership and teaching across projects. Relevant background for how a letter
+  frames the move.
 - Work authorisation, notice period and salary expectations: not recorded. Add
   them here if an application ever needs them.

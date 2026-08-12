@@ -59,6 +59,14 @@ asks otherwise, but this is the default order.
 - **The Franka Emika C++ API.** Old and small, but it is the middle link in an
   unbroken C++ record spanning 2022 to now across three roles. Cutting it breaks
   the chain, which is exactly what a C++-heavy reader is checking.
+- **The Alistair Cockburn hexagonal architecture training.** Trained by the person
+  who created the pattern, applies it at work, teaches it to colleagues. Rare and
+  verifiable.
+
+**Deliberately downplayed:**
+
+- **HALCON.** Real experience, but he does not want a HALCON-centric role. Never
+  lead with it; never target roles built around it. See `learning.md`.
 
 **Rarely select:**
 
