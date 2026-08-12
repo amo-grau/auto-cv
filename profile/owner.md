@@ -9,7 +9,7 @@ to change — run `/bootstrap`, which replaces it along with everything else.
 ## Identity
 
 - **Name:** Oscar Amo Grau
-- **Professional title:** Software Engineer
+- **Professional title:** Robotics Software Engineer
 - **Location:** Munich, Germany
 - **Email:** oscaramog@gmail.com
 - **Phone:** +49 15757815031

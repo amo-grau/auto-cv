@@ -6,11 +6,23 @@ be written down. Answering these improves every future CV at once.
 
 Delete a question once its answer has been folded into the relevant entry.
 
+Last interview: 12.08.2026.
+
+## Blocking — answer before the next application
+
+- **NDA scope on the current project.** OCR with AI plus HALCON measurement work.
+  How much can go on a CV? Options, narrowest first: say nothing; "computer vision
+  project under NDA"; name the techniques (OCR, HALCON) without the application;
+  name the application. Nothing goes on a CV until this is settled.
+
 ## Needs a number
 
-- **Pick-and-place fair application.** Cycle time, pick success rate, number of
-  distinct objects handled, inference latency on the Jetson, how long it ran at
-  the fair, how many people saw it? Which fair, and when?
+- **Pick Anything.** Still missing: how many distinct objects it could handle,
+  which Jetson model, which trade fair and when, how long it ran, whether it is
+  still in use or being reused by other teams.
+  *(Answered 12.08.2026: 40 ms segmentation inference, 5 ms grasp selection,
+  500 ms collision environment + planning in parallel, >95% grasp success
+  conditional on a path being found.)*
 - **Inference-optimization Docker container.** How much faster? Compared to what
   baseline? Which models, which Jetson model? Is it used by other teams?
 - **AI training/deployment platform.** How many models, how many users, how much
@@ -26,10 +38,12 @@ Delete a question once its answer has been folded into the relevant entry.
 
 ## Needs confirming
 
-- **Job title at Yaskawa.** The CV says "Backend robotics software developer", the
-  letter says "Software Developer". Which is the official title? Has it changed
-  since 09.2023 — is there a promotion to record?
 - **Course completion dates** — all four courses in `learning.md` are undated.
+- **Code review and merge ownership.** Roughly how many developers' work is
+  reviewed, and across how many projects? "Reviews code and owns merges to main
+  across N projects" is far stronger than the same claim without N.
+- **Teaching hexagonal architecture.** Informal one-to-one, or sessions to the
+  team? How many people? Anything written down that others still use?
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.
@@ -39,9 +53,11 @@ Delete a question once its answer has been folded into the relevant entry.
 ## Probably missing entirely
 
 - Personal or open-source projects.
-- Publications, talks, or teaching.
-- Anything done in 2024–2026 that is not captured above — three years at Yaskawa
-  are currently described in four bullets, all of which read as if written at the
-  start. What has changed since? New responsibilities, mentoring, ownership of a
-  system, on-call, hiring, leading a project?
+- Publications, talks, or teaching outside the team.
 - Certifications beyond the four listed courses.
+- Still unasked from the 12.08.2026 interview: has he interviewed candidates,
+  onboarded new joiners, presented to customers or management, or made an
+  architecture decision that outlived the project it was made for?
+- **The promotion question.** Three years, no promotion, while doing code review,
+  merge ownership and teaching across projects. Not CV content, but it is context
+  for the job search and belongs in `owner.md` if it is a reason for moving.

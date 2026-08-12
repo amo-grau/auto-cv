@@ -1,29 +1,71 @@
 # Experience
 
-Seeded from the existing CV and motivation letter. Detail marked `?` is unconfirmed
-and tracked in `_gaps.md` — do not put it on a CV until the owner confirms it.
+Seeded from the existing CV and motivation letter, then extended in an interview
+on 12.08.2026. Anything unconfirmed is tracked in `_gaps.md` — do not put it on a
+CV until the owner confirms it.
 
-## Backend robotics software developer — Yaskawa Europe GmbH
+## Robotics Software Engineer — Yaskawa Europe GmbH
 
 - **When:** 09.2023 – Present
 - **Where:** Munich, Germany
 - **Tags:** c++, c#, python, ros, docker, grpc, jetson, edge-ai, computer-vision,
   grasp-detection, object-detection, instance-segmentation, path-planning,
-  onnx, pytorch, tdd, agile, industrial-robotics, cobots, palletizing, welding
+  collision-avoidance, ocr, halcon, onnx, pytorch, tdd, hexagonal-architecture,
+  code-review, technical-leadership, mentoring, agile, industrial-robotics,
+  cobots, palletizing, welding
 
-Integrating AI models onto edge devices for industrial robotic applications.
+Official title is **Robotics Software Engineer**; no promotion since joining.
+Confirmed 08.2026 — the old CV said "Backend robotics software developer" and the
+letter said "Software Developer", both wrong.
 
-- Built a platform for training and deploying vision-based AI models.
-- Implemented a [pick-and-place fair application](https://www.youtube.com/watch?v=cLZ84RRqHHs)
-  by training and deploying state-of-the-art open-source models for grasp
-  detection, object detection and instance segmentation, plus semi-dynamic path
-  planning. Python, gRPC and ROS, deployed to an NVIDIA Jetson board in Docker
-  containers. Shown publicly at a trade fair.
+### Ownership and technical leadership
+
+Holds a senior's responsibilities without the senior title. Worth stating on a CV
+as scope, not as rank.
+
+- Owns **Pick Anything**, the trade-show pick-and-place application (below).
+- Owns the vision-based AI software stack for training and deploying open-source
+  AI models — the platform other applications build on.
+- Reviews other developers' code on every project he works on, and is the
+  developer who merges to main on all of them.
+- Works to hexagonal architecture and teaches it to other developers on the team.
+
+### Pick Anything — trade-show pick-and-place application
+
+[Video](https://www.youtube.com/watch?v=cLZ84RRqHHs). AI-driven picking with
+automatic path planning and collision avoidance, running in a Docker container on
+an NVIDIA Jetson board.
+
+Measured performance:
+
+- Instance segmentation inference: **40 ms**.
+- Grasp candidate selection: **5 ms**.
+- Collision environment generation and path planning: **500 ms**, run in parallel
+  while the user selects the object to grasp, so it is not perceptible.
+- **Grasp success rate above 95%, conditional on a path being found.** State the
+  condition whenever the number is used — it is not a bare 95%.
+- When a target sits too close to an obstacle no path is found; the application
+  reports to the user *why* planning failed rather than failing silently.
+
+### Vision-based AI platform
+
+- Built the platform for training and deploying vision-based AI models: grasp
+  detection, object detection and instance segmentation. Python, gRPC and ROS,
+  deployed to NVIDIA Jetson boards in Docker containers.
+- Built a Docker container that optimizes open-source AI model inference on
+  NVIDIA Jetson boards, in Python and C++.
+
+### Current project (under NDA)
+
+- OCR using AI, plus measurement work with HALCON. Details cannot be shared.
+- **Check before putting any of this on a CV** — see `_gaps.md`. Even naming the
+  domain may be more than the agreement allows.
+
+### Earlier work
+
 - Designed and developed smart welding applications running on the Smart Pendant
   of Yaskawa collaborative robot arms, in C#, using Agile and Test-Driven
   Development.
-- Built a Docker container that optimizes open-source AI model inference on NVIDIA
-  Jetson boards, in Python and C++.
 - Worked on smart palletizing applications.
 
 ## Working Student, Chair for Neuro-prosthetics — TUM
