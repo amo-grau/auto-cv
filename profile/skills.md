@@ -19,10 +19,13 @@ ROS, gRPC, PyTorch, ONNX, OpenCV, HALCON, pandas, NumPy, Matplotlib.
 ## Tools and platforms
 
 - **Tags:** docker, git, isaac-sim, jetson, jetson-orin, yaskawa-next, vs-code,
-  visual-studio, jupyter, beckhoff, plc, mysql
+  visual-studio, jupyter, beckhoff, plc, ladder-logic, mysql
 
 Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson (including Jetson Orin), Yaskawa NEXT
 controller, VS Code, Visual Studio, Jupyter Notebooks, Beckhoff PLC, MySQL.
+
+Reads and integrates with ladder logic (Yaskawa's PLC-style programming) without
+writing it — see the Pick Anything safety components in `experience.md`.
 
 ## Software engineering practice
 

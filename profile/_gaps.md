@@ -38,8 +38,6 @@ Applies to CVs, letters and interviews alike.
 - **Course completion dates** — all four courses in `learning.md` are undated.
 - **Teaching hexagonal architecture.** Informal one-to-one, or sessions to the
   team? How many people? Anything written down that others still use?
-- **Pick Anything ownership boundary.** Sole developer, or lead of a small group?
-  A reader will ask, and "owns" means different things either way.
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.

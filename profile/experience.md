@@ -23,7 +23,8 @@ letter said "Software Developer", both wrong.
 Holds a senior's responsibilities without the senior title. Worth stating on a CV
 as scope, not as rank.
 
-- Owns **Pick Anything**, the trade-show pick-and-place application (below).
+- **Main developer** of Pick Anything, the trade-show pick-and-place application
+  (below) — including integrating other contributors' components.
 - Owns the vision-based AI software stack for training and deploying open-source
   AI models — the platform other applications build on.
 - Reviews the code of around **4 developers across 4 projects**, and is the
@@ -45,6 +46,21 @@ Scope:
 - Handles **more than 10 distinct object types** and retrains easily for more.
   Fruits and baskets as targets, wall blocks as obstacles to avoid.
 - The user selects what to grasp; the system plans around everything else.
+
+**Role — main developer, not sole developer.** Say it this way; it is accurate and
+still strong.
+
+- His: the main application, the vision and grasping pipeline, path planning and
+  collision avoidance, deployment to the Jetson Orin, and integrating everyone
+  else's components into a working cell.
+- Others': the user interface; the safety logic (light barrier, stop button)
+  written in ladder logic, Yaskawa's PLC-style programming; and obstacle mesh
+  generation, which he integrated into the main code rather than writing.
+
+The integration work is worth naming explicitly. A cell combining AI perception,
+motion planning, a UI and certified-style safety logic from several contributors
+is a systems-integration achievement, and being the person who made those parts
+work together is a stronger claim than having written all of them.
 
 **Adoption — the strongest evidence on this CV:**
 
