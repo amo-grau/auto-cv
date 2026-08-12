@@ -27,11 +27,14 @@ as scope, not as rank.
   (below) — including integrating other contributors' components.
 - Owns the vision-based AI software stack for training and deploying open-source
   AI models — the platform other applications build on.
-- Reviews the code of around **4 developers across 4 projects**, and is the
+- Reviews the code of around **4 developers across 3 projects**, and is the
   developer who merges to main on every project he works on. Not part of his
-  formal job description. Named projects: a course preparation for learning
-  Yaskawa NEXT, the Pick Anything fair cell, and an AI pipeline.
-- Works to hexagonal architecture and teaches it to other developers on the team.
+  formal job description. The three: a course preparation for learning Yaskawa
+  NEXT, the Pick Anything fair cell, and an AI pipeline.
+- Works to hexagonal architecture and runs informal sessions teaching it to other
+  developers — specifically so they can understand how his projects are
+  structured and contribute to them. Teaching in service of getting others
+  productive in his codebases, not architecture advocacy for its own sake.
 
 ### Pick Anything — trade-show pick-and-place application
 

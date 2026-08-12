@@ -16,10 +16,6 @@ vision, are fine; what it is used for, for whom, and in which product are not.
 Applies to CVs, letters and interviews alike.
 
 ## Needs a number
-
-- **Pick Anything.** One loose end: the count of reviewed projects. Four projects
-  were stated, three named (Yaskawa NEXT course preparation, the Pick Anything
-  fair cell, an AI pipeline). What is the fourth?
 - **Inference-optimization Docker container.** How much faster? Compared to what
   baseline? Which models, which Jetson model? Is it used by other teams?
 - **AI training/deployment platform.** How many models, how many users, how much
@@ -36,8 +32,9 @@ Applies to CVs, letters and interviews alike.
 ## Needs confirming
 
 - **Course completion dates** — all four courses in `learning.md` are undated.
-- **Teaching hexagonal architecture.** Informal one-to-one, or sessions to the
-  team? How many people? Anything written down that others still use?
+- **Teaching hexagonal architecture.** Answered: informal sessions, to help others
+  contribute to his projects. Still open — how many people attended, and is any of
+  it written down and still in use?
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.
