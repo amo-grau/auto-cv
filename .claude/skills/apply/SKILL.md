@@ -73,6 +73,11 @@ Letter: edit `applications/<slug>/letter/info.tex` — set `\company` and
 actually names them. Then edit `body.tex` so the opening names the role, and the
 middle paragraphs address what this posting actually asks for.
 
+Write in the voice defined in `CLAUDE.md` — formal, plain, specific. No enthusiasm
+boilerplate, no marketing adjectives, no closing sentence that restates the letter.
+A letter that reads as generated is worse than no letter; recruiters check for this
+now. Specific detail is what keeps it human *and* what the screening filter wants.
+
 If the posting is written in German, ask Oscar whether he wants the letter in
 German before writing it. Do not decide that for him.
 

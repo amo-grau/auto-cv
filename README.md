@@ -52,6 +52,12 @@ improves every future CV at once.
 Throughout: nothing is added that I have not confirmed. Tailoring selects and
 rephrases what is true — it does not invent.
 
+**On style.** Everything is written to be formal but plain, and never in the
+register of a generated cover letter — no "excited about the opportunity", no
+"state-of-the-art", no enthusiasm boilerplate. That is not in tension with getting
+past automated screening: concrete detail is what filters reward and what reads as
+human. The rules are in [CLAUDE.md](CLAUDE.md#voice).
+
 ## Layout
 
 Each document is a directory with a `main.tex` inside it.

@@ -213,12 +213,65 @@ become relevant, and prefer asking one well-aimed question over listing ten.
 
 ---
 
+## Voice
+
+Everything written here — CV bullets, letter prose, `profile/` entries — must read
+as though Oscar wrote it: formal, plain, and specific. Two constraints apply at
+once, and they are not in conflict:
+
+1. **It must not read as machine-generated.** A recruiter who suspects a generated
+   letter stops reading. This is now a common, deliberate check.
+2. **It must still satisfy automated screening**, which looks for concrete
+   evidence — the right skills, real systems, actual numbers.
+
+**Specificity satisfies both.** A detail only the person who did the work would
+know is simultaneously the strongest signal to a filter and the clearest proof a
+human wrote it. When in doubt, get more specific, not more polished.
+
+### Write like this
+
+- Short declarative sentences. Vary their length naturally; do not balance them.
+- Concrete nouns: model names, hardware, languages, numbers, systems.
+- One idea per sentence. State it and move on.
+- Plain verbs — built, wrote, shipped, measured, fixed, deployed.
+- It is fine to be slightly plain or slightly blunt. That reads as human.
+
+### Do not write like this
+
+Avoid, in order of how badly they give the game away:
+
+- Enthusiasm boilerplate: "I am excited about the opportunity to…", "I am
+  passionate about…", "I would be thrilled to…".
+- Inflated commitment: "deeply committed", "profound passion", "enthusiastically
+  pursued", "strongly believe".
+- Marketing adjectives: state-of-the-art, cutting-edge, robust, seamless,
+  innovative, dynamic, comprehensive, world-class.
+- Corporate verbs: leverage, utilize, spearhead, drive synergies, showcase, delve.
+- Three-item lists used for rhythm rather than because there are three things.
+- Connective scaffolding: "Moreover", "Furthermore", "Additionally", "In today's…",
+  "Not only… but also".
+- A closing sentence that restates the paragraph above it.
+- Every bullet built to the same grammatical template. Real writing is uneven.
+- Claims with no object: "improved efficiency", "contributed to success". Improved
+  what, by how much?
+
+### The test
+
+Read it aloud. If it sounds like a brochure, an award acceptance, or a LinkedIn
+post, rewrite it. If it sounds like a competent engineer explaining what he did to
+someone who will ask follow-up questions, it is right.
+
+A sentence that could appear in any candidate's letter is worth nothing. Cut it or
+replace it with something only Oscar could write.
+
 ## Rules that hold in every mode
 
 - **Truthfulness is absolute.** Never add a skill, tool, employer, date, metric or
   claim that Oscar has not confirmed. This applies to bootstrap, tailoring and
   updates alike, and to `profile/` as much as to the rendered documents.
 - New facts enter through `profile/`, never straight onto a CV.
+- Write in the voice above: formal, plain, specific. Never in the register of a
+  generated cover letter.
 - The CV is one page. The letter is one page.
 - After any change, rebuild and read the extracted text — not just the page count.
 - Nothing company-specific ever enters `base/`.
