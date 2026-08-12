@@ -35,6 +35,11 @@ Applies to CVs, letters and interviews alike.
 - **Teaching hexagonal architecture.** Answered: informal sessions, to help others
   contribute to his projects. Still open — how many people attended, and is any of
   it written down and still in use?
+- **How much C++ does he write today?** The CV will claim C++ across three roles
+  and four years, which is true by the timeline. But the recent Yaskawa work named
+  so far is mostly Python, gRPC and ROS, with C++ on the inference container. If a
+  C++-heavy employer asks "what did you write in C++ this year", there needs to be
+  an answer. What is the current split?
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.

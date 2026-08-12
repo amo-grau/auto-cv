@@ -42,6 +42,31 @@ and the number in the first clause.
 - When something new happens, it lands here first, and only then propagates to
   `base/cv/`.
 
+## Selection priorities
+
+Standing guidance from the owner, 12.08.2026. Overridden by a posting that clearly
+asks otherwise, but this is the default order.
+
+**Lead with:**
+
+1. **Pick Anything** — ownership, adoption across two continents, real numbers.
+   The strongest item available.
+2. **The vision-based AI platform** — the thing other applications build on.
+3. **Code review, merge authority and teaching** — senior scope without the title.
+
+**Always keep, even when short of space:**
+
+- **The Franka Emika C++ API.** Old and small, but it is the middle link in an
+  unbroken C++ record spanning 2022 to now across three roles. Cutting it breaks
+  the chain, which is exactly what a C++-heavy reader is checking.
+
+**Rarely select:**
+
+- Smart welding and palletizing — only for welding, logistics or C#/.NET roles.
+- The TRANE internship — a 2020 non-software internship, outclassed by everything
+  else on the page.
+- The eleven-book list — name two or three, or fold it into one line.
+
 ## `_gaps.md`
 
 Open questions — entries missing the number, scope or outcome that would make

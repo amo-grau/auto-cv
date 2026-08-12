@@ -106,7 +106,11 @@ customer, or which product.
 Safe phrasing: "Training and deploying AI models for OCR, and computer vision work
 with HALCON." Anything answering *what for* is out of bounds.
 
-### Earlier work
+### Earlier work — low selection priority
+
+Kept in full, but rarely worth page space against the current targets. Select only
+when a posting specifically rewards it: welding for arc/welding automation roles,
+palletizing for logistics, C# for a .NET-heavy team.
 
 - Designed and developed smart welding applications running on the Smart Pendant
   of Yaskawa collaborative robot arms, in C#, using Agile and Test-Driven
@@ -123,6 +127,16 @@ with HALCON." Anything answering *what for* is out of bounds.
 - Configured a Franka Emika Panda arm and wrote a C++ API that simplified
   trajectory control of the arm for other users in the lab.
 
+**Keep this entry.** It is short and old, but it is the middle link in an unbroken
+C++ record — 03.2022 at Construction Robotics, 04.2023 here, and C++ at Yaskawa
+since 09.2023. Together those show **C++ across three roles and more than four
+years**, which is the claim a C++-heavy posting actually tests. Dropping this
+entry breaks the chain and leaves a gap between 2022 and 2023.
+
+It also has the same shape as the work he does now: building an API so other
+people can use a robot more easily. That through-line — making things usable by
+others — connects it to the code review, the teaching and the platform work.
+
 ## Working Student, Chair for Construction Robotics — TUM
 
 - **When:** 03.2022 – 02.2023
@@ -135,6 +149,10 @@ with HALCON." Anything answering *what for* is out of bounds.
   PLC (Structured Text).
 
 ## Supply Chain Intern — TRANE Technologies
+
+**Low selection priority.** A three-month non-software internship from 2020,
+outclassed by everything above it. Select only if a posting rewards manufacturing
+or supply-chain domain knowledge, or if a page needs filling — which it does not.
 
 - **When:** 03.2020 – 06.2020
 - **Where:** Barcelona, Spain
