@@ -103,124 +103,113 @@
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Oscar Amo Grau} \\ \vspace{1pt}
-    \small +49 15757815031 $|$ \href{mailto:oscaramog@gmail.com}{\underline{oscaramog@gmail.com}} $|$
+    \textbf{\Huge \scshape Oscar Amo Grau} \\ \vspace{2pt}
+    \small Robotics Software Engineer $|$ Munich, Germany \\ \vspace{2pt}
+    \small +49 15757815031 $|$
+    \href{mailto:oscaramog@gmail.com}{\underline{oscaramog@gmail.com}} $|$
     \href{https://www.linkedin.com/in/oscaramograu/}{\underline{linkedin.com/in/oscaramograu}} $|$
     \href{https://github.com/amo-grau}{\underline{github.com/amo-grau}}
 \end{center}
 
+%-----------SUMMARY-----------
+\section{Summary}
+  \vspace{2pt}
+  \small{Robotics software engineer, three years at Yaskawa building vision-based AI for
+  industrial robots: model training, edge deployment on NVIDIA Jetson, motion planning and
+  collision avoidance. Main developer of a pick-and-place cell since rebuilt by Yaskawa USA.
+  C++ and Python since 2022; reviews code and owns merges across three projects.}
+  \vspace{4pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Robotics Software Engineer}{09.2023 -- Present}
+      {Robotics Software Engineer}{Sep 2023 -- Present}
       {Yaskawa Europe GmbH}{Munich, Germany}
       \resumeItemListStart
-        \resumeItem{Development of a platform for training and deployment of vision-based AI models.}
-        \resumeItem{Implemented a \href{https://www.youtube.com/watch?v=cLZ84RRqHHs&t=2s}{\underline{pick-and-place fair application}} by training and deploying state of the art open-source AI models for grasp detection, object detection, and instance segmentation, using Python gRPC, ROS and deploying on a Jetson board using Docker containers.}
-        \resumeItem{Designed and developed smart welding applications for use on the Smart Pendant of YASKAWA collaborative robot arms, using Agile and Test-Driven Development practices in C\#.}
-        \resumeItem{Developed a Docker container to optimize open-source AI models inference in NVIDIA Jetson Boards, using Python and C++.}
+        \resumeItem{Main developer of \textbf{Pick Anything}, a
+        \href{https://www.youtube.com/watch?v=cLZ84RRqHHs}{\underline{pick-and-place cell}}
+        combining instance segmentation, grasp detection and collision-aware path planning.
+        Runs in Docker on an NVIDIA Jetson Orin inside the Yaskawa NEXT controller, handles
+        more than 10 object types and retrains for more.}
+        \resumeItem{Measured: 40\,ms segmentation inference, 5\,ms grasp selection, 500\,ms
+        collision environment and planning run in parallel with the operator's selection.
+        Grasp success above 95\% when a path is found; when none exists the cell reports why
+        rather than failing silently.}
+        \resumeItem{Built for Automatica 2025 and since shipped to fairs across Europe.
+        Yaskawa USA built their own copy for the American circuit; a third is being built for
+        the German showroom. Integrated the interface, ladder-logic safety and obstacle mesh
+        generation written by others into the working cell.}
+        \resumeItem{Own the vision-based AI platform other applications build on: training
+        and deploying open-source models for grasp detection, object detection and instance
+        segmentation, in Python, gRPC and ROS, containerised for Jetson boards.}
+        \resumeItem{Review the code of four developers across three projects, and merge to
+        main on each of them, without holding a senior title. Run informal hexagonal
+        architecture sessions so colleagues can contribute to those codebases.}
+        \resumeItem{Currently training and deploying AI models for OCR, with computer vision
+        work in HALCON.}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
     \resumeSubheading
-      {Working Student Chair for Neuro-prosthetics}{04.2023 -- 07.2023}
+      {Working Student, Chair for Neuro-prosthetics}{Apr 2023 -- Jul 2023}
       {TUM, Technical University of Munich}{Munich, Germany}
       \resumeItemListStart
-        \resumeItem{Configuring a Franka Emika Panda arm and writing a C++ API to ease the trajectory control of the arm}
-    \resumeItemListEnd
+        \resumeItem{Configured a Franka Emika Panda arm and wrote a C++ API that made
+        trajectory control usable by the rest of the lab.}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Working Student, Chair for Construction Robotics}{03.2022 -- 02.2023}
+      {Working Student, Chair for Construction Robotics}{Mar 2022 -- Feb 2023}
       {TUM, Technical University of Munich}{Munich, Germany}
       \resumeItemListStart
-        \resumeItem{Automatization of an industrial assembly process. Programming a pick and place routine for a UR10 manipulator robot driven by ROS (C++ and Python) and a Beckhoff PLC (Structured Text)}
-    \resumeItemListEnd
-    \resumeSubheading
-      {Supply Chain Intern}{03.2020 -- 06.2020}
-      {TRANE Technologies} {Barcelona, Spain}
-      \resumeItemListStart
-        \resumeItem{Detection of errors in the tests done to the produced cooling machines. Analysis of data results, using Excel, Python and MySQL Server.}
+        \resumeItem{Automated an industrial assembly process: a pick-and-place routine for a
+        UR10 manipulator driven by ROS in C++ and Python, coordinated with a Beckhoff PLC in
+        Structured Text.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-  
+
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {TUM, Technical University of Munich}{Munich, Germany}
-      {MSc. Mechatronics and Robotics}{10.2021 -- 09.2023}
+      {MSc. Mechatronics and Robotics}{Oct 2021 -- Sep 2023}
     \resumeSubheading
-      {ETSEIB, UPC, Universitat Politècnica Catalunya}{Barcelona, Spain}
-      {MSc. Industrial Engineering}{09.2020 -- 09.2023}
+      {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
+      {MSc. Industrial Engineering}{Sep 2020 -- Sep 2023}
     \resumeSubheading
-      {ETSEIB, UPC, Universitat Politècnica Catalunya}{Barcelona, Spain}
-      {Bachelor Industrial Engineering}{09.2015 -- 06.2020}
+      {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
+      {Bachelor, Industrial Engineering}{Sep 2015 -- Jun 2020}
   \resumeSubHeadingListEnd
 
+%-----------TRAINING-----------
+\section{Training and Courses}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Hexagonal Architecture}{: one-week training with Alistair Cockburn, who created the pattern (May 2026)} \\
+     \textbf{Machine Vision Lighting}{: LUMIMAX (Jun 2026)} \hspace{6pt} $|$ \hspace{6pt}
+     \textbf{HALCON}{: one-week training (May 2026)} \\
+     \textbf{Courses}{: Robotics Fundamentals, NVIDIA; Computer Vision and Image Processing, IBM; ROS Basics in 5 Days (C++), The Construct; Leadership in Organizations, LSE}
+    }}
+ \end{itemize}
 
-
-\section{Professional Development}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-        {\textbf{Relevant software books read}}{}
-        \resumeItem{Refactoring, Growing Object Oriented Software Guided by Tests, Test Driven Development by Example, The Pragmatic Programmer, Clean Architecture, Domain-Driven Design, Clean Code, The Clean Coder, Hexagonal Architecture Explained, Head First Design Patterns, Design Patterns}
-      \resumeProjectHeading
-       {\textbf{Relevant Courses}}{}
-        \resumeItemListStart
-          \resumeItem{NVIDIA Robotics Fundamentals Learning Path, NVIDIA}
-          \resumeItem{Introduction to Computer Vision and Image Processing, IBM}
-          \resumeItem{Leadership in Organizations, London School of Economics}
-          \resumeItem{ROS Basics in 5 Days (C++), The Construct}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
+%-----------SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Spanish (Mother Tongue), Catalan (Mother Tongue), English (C1), German (B2)} \\
-     \textbf{Programming Languages}{: C++, Python, Java, C\#, HTML and CSS} \\
-     \textbf{Developer Tools}{: Isaac Sim, Git, Docker, VS Code, Visual Studio, Jupyter Notebooks} \\
-     \textbf{Relevant Libraries and Frameworks}{: pandas, NumPy, Matplotlib, pytorch, ONNX, gRPC, ROS, OpenCV}
+     \textbf{Programming Languages}{: C++, Python, C\#, Java} \\
+     \textbf{Robotics and AI}{: ROS, PyTorch, ONNX, OpenCV, gRPC, HALCON, OCR} \\
+     \textbf{Platforms and Tools}{: Docker, NVIDIA Jetson Orin, Yaskawa NEXT, NVIDIA Isaac Sim, Git, Beckhoff PLC} \\
+     \textbf{Practices}{: test-driven development, hexagonal architecture, SOLID, design patterns, code review} \\
+     \textbf{Spoken Languages}{: Spanish (native), Catalan (native), English (C1), German (B2)}
     }}
- \end{itemize} 
+ \end{itemize}
 
-
-%-----------PROJECTS-----------
-%-------------------------------------------
 \end{document}
-
-\section{Other Professional Activities}
-  \resumeSubHeadingListStart
-     \resumeSubheading
-          {Professional Basketball Player, Liga LEB Oro}{09.2015 -- 06.2017}
-          {Club Joventut Badalona} {Badalona, Spain}
-     \resumeSubheading
-        {Youth Spanish National Basketball Team} {07.2014 -- 08.2016}
-        {FEB Spanish Federation of Basketball} {Spain}
-  \resumeSubHeadingListEnd

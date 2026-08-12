@@ -302,11 +302,9 @@ icons and extract as `#` and `*`, so a parser reading the letter finds no email 
 phone. The letter is also justified and hyphenates, splitting keywords across
 lines (`de-veloping` no longer matches `developing`).
 
-**CV, ATS (mode 2).** Dates read `09.2023`, which is ambiguous month/year to a
-parser; `Sep 2023` or `09/2023` is safer. "Professional Development" is a
-non-standard heading and parsers match headings literally. There is no summary
-line at the top stating role, core languages and years of experience — usually the
-first thing an LLM filter reads.
+**CV, ATS (mode 2).** Fixed 12.08.2026 — dates now read `Sep 2023`, headings are
+standard (Summary, Experience, Education, Training and Courses, Skills), and a
+summary line leads the document. Keep it that way.
 
 **Letter, voice.** `base/letter/body.tex` predates the Voice section and breaks it
 in several places: "state-of-the-art", "deeply committed", "I am excited about the
@@ -314,8 +312,9 @@ opportunity to contribute my technical skills and my global mindset", and a fift
 paragraph whose two sentences say the same thing with no information in either.
 Paragraphs 2 and 3 are the good ones — they contain real systems and real work.
 
-**Content.** Almost no bullet carries a number, and three years at Yaskawa are
-described in four bullets that all read as if written in the first six months. See
+**Content.** Largely addressed by the 12.08.2026 interview and CV rewrite. The
+older roles (welding, Franka API, Construction Robotics, TRANE) still carry no
+numbers, but they are low-priority selections. Remaining questions in
 `profile/_gaps.md`.
 
 ## Compiling
