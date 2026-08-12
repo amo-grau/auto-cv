@@ -32,10 +32,12 @@ multi-column layout, consistent dates, and `\pdfgentounicode=1` so glyphs map ba
 to real characters. The test is `pdftotext -layout` — what it prints is what the
 filter reads.
 
-**3. Tailor to a job offer.** I paste a posting; Claude creates
-`applications/<company>-<role>/` and re-selects from the inventory to match it —
-pulling in what fits, dropping what doesn't. Entries missing from my default CV
-can appear here; every tagged entry is a candidate.
+**3. Tailor to a job offer.** I open a session, say I want to apply, and paste a
+link. Claude fetches and reads the posting, creates
+`applications/<company>-<role>/`, re-selects from the inventory to match it,
+compiles both documents and checks them — in one go. Entries missing from my
+default CV can appear here; every tagged entry is a candidate. See
+[the `apply` skill](.claude/skills/apply/SKILL.md).
 
 **4. Keep the information current.** New job, finished course, book read, project
 shipped: it goes into `profile/` at full length, then Claude decides separately
@@ -98,11 +100,21 @@ each one, since both documents are meant to be a single page.
 
 ## Applying to a job
 
-1. Create `applications/<company>-<role>/` and drop the posting in as `offer.md`.
-2. `cp -r base/cv base/letter applications/<company>-<role>/`.
-3. Re-select from `profile/` against the posting, then tailor the wording —
-   reorder and prune, never invent.
-4. `./build.sh applications/<company>-<role>`, check the page counts, send.
+Open a session in this repo and say so, with the link:
+
+```
+/apply https://boards.example.com/acme/robotics-software-engineer
+```
+
+Claude then fetches and reads the posting, saves it verbatim to
+`applications/<company>-<role>/offer.md`, copies both documents in, re-selects
+their content from `profile/` against what the posting asks for, compiles, checks
+that each is one page and that the text still extracts cleanly, and reports what
+it changed and any requirement I don't meet.
+
+Some job boards — LinkedIn especially — block automated fetching and return a
+login wall. When that happens Claude asks for the posting text pasted in, and
+continues from there.
 
 ## Privacy
 

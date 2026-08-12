@@ -115,10 +115,21 @@ reduced to plain text. Concretely:
 
 ## 3. Specialized job applications
 
-Trigger: Oscar sends a job posting.
+Trigger: Oscar says he wants to apply somewhere, sends a job posting **link**, or
+pastes a job description.
 
-1. Create `applications/<company>-<role>/` and save the posting verbatim to
-   `offer.md`.
+**Run the `apply` skill** (`.claude/skills/apply/SKILL.md`) — it drives the whole
+pipeline from a URL: fetch the posting, create the folder, select, write, compile,
+verify, report. Usually Oscar opens a fresh session, says he wants to apply, and
+gives nothing but a link; the skill starts from there and runs to a compiled PDF
+without stopping for confirmation at each step.
+
+Fetching often fails — LinkedIn and other boards return login walls. That is
+expected: ask him to paste the text, then carry on.
+
+The steps the skill follows, in short:
+
+1. Fetch and read the posting; save it verbatim to `offer.md` with its source URL.
 2. `cp -r base/cv base/letter applications/<company>-<role>/`.
 3. **Re-select from `profile/`, do not merely trim `base/`.** Read the posting,
    match it against the inventory's tags and entries, and decide what earns a
@@ -134,7 +145,7 @@ Trigger: Oscar sends a job posting.
 Tailoring rules:
 
 - **Never invent or inflate.** No experience, tool, employer, date, or metric that
-  isn't already in `base/` or confirmed by Oscar. Tailoring means selecting,
+  isn't already in `profile/` or confirmed by Oscar. Tailoring means selecting,
   reordering, and rephrasing what is true — nothing else.
 - Mirror the posting's own vocabulary where it honestly describes existing work
   (posting says "computer vision", the bullet says "vision-based AI models" —
