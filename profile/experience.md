@@ -67,8 +67,12 @@ work together is a stronger claim than having written all of them.
 
 **Adoption — the strongest evidence on this CV:**
 
-- Shipped to trade fairs across Europe.
-- **Yaskawa USA built their own copy** to tour fairs in the United States.
+- Main developer from the first build onwards, not someone who inherited it.
+  Phrase this carefully: "since rebuilt by Yaskawa USA" wrongly suggests he took
+  over after a rebuild.
+- The original cell has toured many trade fairs across Europe.
+- **Yaskawa USA built their own copy** to tour fairs in the United States. A copy
+  of the cell, not a rebuild of it.
 - A third copy is being built for the German showroom, for customer demonstrations
   on site.
 - Internally described as the most advanced cell Yaskawa has outside Japan.
