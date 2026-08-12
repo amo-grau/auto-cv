@@ -23,20 +23,20 @@ letter said "Software Developer", both wrong.
 Holds a senior's responsibilities without the senior title. Worth stating on a CV
 as scope, not as rank.
 
-- **Main developer** of Pick Anything, the trade-show pick-and-place application
+- **Main developer** of PickAnything, the trade-show pick-and-place application
   (below) — including integrating other contributors' components.
 - Owns the vision-based AI software stack for training and deploying open-source
   AI models — the platform other applications build on.
 - Reviews the code of around **4 developers across 3 projects**, and is the
   developer who merges to main on every project he works on. Not part of his
   formal job description. The three: a course preparation for learning Yaskawa
-  NEXT, the Pick Anything fair cell, and an AI pipeline.
+  NEXT, the PickAnything fair cell, and an AI pipeline.
 - Works to hexagonal architecture and runs informal sessions teaching it to other
   developers — specifically so they can understand how his projects are
   structured and contribute to them. Teaching in service of getting others
   productive in his codebases, not architecture advocacy for its own sake.
 
-### Pick Anything — trade-show pick-and-place application
+### PickAnything — trade-show pick-and-place application
 
 [Video](https://www.youtube.com/watch?v=cLZ84RRqHHs). AI-driven picking with
 automatic path planning and collision avoidance, running in a Docker container on

@@ -28,7 +28,7 @@ Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson (including Jetson Orin), Yaskawa NE
 controller, VS Code, Visual Studio, Jupyter Notebooks, Beckhoff PLC, MySQL.
 
 Reads and integrates with ladder logic (Yaskawa's PLC-style programming) without
-writing it — see the Pick Anything safety components in `experience.md`.
+writing it — see the PickAnything safety components in `experience.md`.
 
 ## Software engineering practice
 

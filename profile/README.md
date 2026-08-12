@@ -49,7 +49,7 @@ asks otherwise, but this is the default order.
 
 **Lead with:**
 
-1. **Pick Anything** — ownership, adoption across two continents, real numbers.
+1. **PickAnything** — ownership, adoption across two continents, real numbers.
    The strongest item available.
 2. **The vision-based AI platform** — the thing other applications build on.
 3. **Code review, merge authority and teaching** — senior scope without the title.

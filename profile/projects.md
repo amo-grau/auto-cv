@@ -3,7 +3,7 @@
 Work worth naming on its own, separate from the job that contained it — including
 personal and open-source work.
 
-## Pick Anything — Yaskawa
+## PickAnything — Yaskawa
 
 - **When:** built for Automatica 2025; still in service
 - **Tags:** computer-vision, grasp-detection, object-detection,
