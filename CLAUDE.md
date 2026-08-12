@@ -1,10 +1,15 @@
 # auto_cv
 
-LaTeX sources for Oscar Amo Grau's CV and motivation letter, plus per-application
+LaTeX sources for one person's CV and motivation letter, plus per-application
 tailored versions.
 
 This repository is the source of truth for both documents. They are edited here,
 not anywhere else.
+
+**Whose CV is this?** See `profile/owner.md`. Everything below says "the owner" and
+means whoever is named there. The repository is meant to be cloned and reused: if
+someone has taken a copy to build their own documents, that is mode 1 — run the
+`bootstrap` skill, which replaces the previous owner's data everywhere it lives.
 
 ## Layout
 
@@ -12,6 +17,7 @@ Every document is a directory containing a `main.tex`.
 
 ```
 profile/                the inventory — everything, uncut, no page limit
+  owner.md              who this checkout belongs to, and where their details live
   experience.md  education.md  projects.md  skills.md
   learning.md    activities.md
   _gaps.md              open questions about existing entries
@@ -31,7 +37,7 @@ build.sh                latexmk wrapper
 
 ## The inventory is the content source of truth
 
-`profile/` holds everything Oscar has done, at full length, with no page limit.
+`profile/` holds everything the owner has done, at full length, with no page limit.
 `base/cv/` is not the master list — it is one *selection* from `profile/`, sized to
 one page. A tailored CV is a different selection from the same inventory.
 
@@ -63,25 +69,29 @@ acting; if genuinely ambiguous, ask.
 
 ## 1. Bootstrap — build the documents from scratch
 
-Trigger: the base documents are empty, being rebuilt, or a whole section has no
-content yet.
+Trigger: someone has cloned this repository to build their own CV, the base
+documents are empty or being rebuilt, or a whole section has no content yet.
 
-Fill `profile/` first by **interviewing Oscar**, then render `base/` from it. Do
+**Run the `bootstrap` skill** (`.claude/skills/bootstrap/SKILL.md`). It carries the
+full checklist of every file holding personal data — miss one and the new CV
+silently carries a stranger's details.
+
+Fill `profile/` first by **interviewing the owner**, then render `base/` from it. Do
 not write placeholder content and do not guess. Rules for the interview:
 
 - Ask about one section at a time; do not dump twenty questions at once.
-- **Insist on specifics.** A first answer is almost always too vague to use. If he
-  says "worked on a vision system", push for: which models, which language, which
+- **Insist on specifics.** A first answer is almost always too vague to use. If they
+  say "worked on a vision system", push for: which models, which language, which
   hardware, how many, how fast, deployed or prototype, who used it, what changed
   because of it. Keep pushing until the bullet could not have been written by
   someone who did not do the work.
 - Chase numbers. Throughput, latency, team size, number of deployments, percentage
   improvement, duration. A bullet with a number beats three without.
-- If he cannot answer, drop the claim rather than softening it into vagueness.
+- If they cannot answer, drop the claim rather than softening it into vagueness.
 - Confirm dates, employer names, job titles and locations exactly as they should
   appear.
 
-Write nothing into the documents that did not come from his answers.
+Write nothing into the documents that did not come from their answers.
 
 ## 2. Template and ATS optimization
 
@@ -115,17 +125,17 @@ reduced to plain text. Concretely:
 
 ## 3. Specialized job applications
 
-Trigger: Oscar says he wants to apply somewhere, sends a job posting **link**, or
+Trigger: the owner says they want to apply somewhere, sends a job posting **link**, or
 pastes a job description.
 
 **Run the `apply` skill** (`.claude/skills/apply/SKILL.md`) — it drives the whole
 pipeline from a URL: fetch the posting, create the folder, select, write, compile,
-verify, report. Usually Oscar opens a fresh session, says he wants to apply, and
+verify, report. Usually the owner opens a fresh session, says they want to apply, and
 gives nothing but a link; the skill starts from there and runs to a compiled PDF
 without stopping for confirmation at each step.
 
 Fetching often fails — LinkedIn and other boards return login walls. That is
-expected: ask him to paste the text, then carry on.
+expected: ask them to paste the text, then carry on.
 
 The steps the skill follows, in short:
 
@@ -145,7 +155,7 @@ The steps the skill follows, in short:
 Tailoring rules:
 
 - **Never invent or inflate.** No experience, tool, employer, date, or metric that
-  isn't already in `profile/` or confirmed by Oscar. Tailoring means selecting,
+  isn't already in `profile/` or confirmed by the owner. Tailoring means selecting,
   reordering, and rephrasing what is true — nothing else.
 - Mirror the posting's own vocabulary where it honestly describes existing work
   (posting says "computer vision", the bullet says "vision-based AI models" —
@@ -157,7 +167,7 @@ Tailoring rules:
 - **The CV must stay on one page.** `build.sh` prints the page count of every PDF.
 - The letter is one page. Always set `\company` and `\position`; set `\team` and
   `\recipient` only when the posting actually names them.
-- If the posting demands something Oscar genuinely lacks, say so plainly rather
+- If the posting demands something the owner genuinely lacks, say so plainly rather
   than papering over it.
 
 `base/` is never edited to fit a posting.
@@ -205,7 +215,7 @@ Look for and say plainly:
 Be direct and concrete: name the line, say why it is weak, propose the
 replacement. Do not soften feedback into uselessness — but do not rewrite content
 in `base/` or `profile/` on the strength of an opinion alone. Propose, then let
-Oscar decide.
+the owner decide.
 
 `profile/_gaps.md` is the standing form of this mode: every unanswered question
 there is feedback already given. Keep it current, raise items from it when they
@@ -216,7 +226,7 @@ become relevant, and prefer asking one well-aimed question over listing ten.
 ## Voice
 
 Everything written here — CV bullets, letter prose, `profile/` entries — must read
-as though Oscar wrote it: formal, plain, and specific. Two constraints apply at
+as though the owner wrote it: formal, plain, and specific. Two constraints apply at
 once, and they are not in conflict:
 
 1. **It must not read as machine-generated.** A recruiter who suspects a generated
@@ -258,16 +268,16 @@ Avoid, in order of how badly they give the game away:
 ### The test
 
 Read it aloud. If it sounds like a brochure, an award acceptance, or a LinkedIn
-post, rewrite it. If it sounds like a competent engineer explaining what he did to
+post, rewrite it. If it sounds like a competent engineer explaining what they did to
 someone who will ask follow-up questions, it is right.
 
 A sentence that could appear in any candidate's letter is worth nothing. Cut it or
-replace it with something only Oscar could write.
+replace it with something only the owner could write.
 
 ## Rules that hold in every mode
 
 - **Truthfulness is absolute.** Never add a skill, tool, employer, date, metric or
-  claim that Oscar has not confirmed. This applies to bootstrap, tailoring and
+  claim that the owner has not confirmed. This applies to bootstrap, tailoring and
   updates alike, and to `profile/` as much as to the rendered documents.
 - New facts enter through `profile/`, never straight onto a CV.
 - Write in the voice above: formal, plain, specific. Never in the register of a

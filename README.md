@@ -23,7 +23,8 @@ comes back for the next posting that rewards it.
 
 **1. Build from scratch.** Starting from the empty templates, Claude interviews me
 section by section and fills them in — pushing for specifics until each bullet
-contains detail only someone who did the work would know.
+contains detail only someone who did the work would know. The same flow makes the
+repo someone else's: see [Using this for your own CV](#using-this-for-your-own-cv).
 
 **2. Optimize for automated screening.** Most applications are read by a parser or
 an LLM filter before a human sees them. The templates are structured to survive
@@ -64,6 +65,7 @@ Each document is a directory with a `main.tex` inside it.
 
 ```
 profile/             the inventory — everything, uncut, no page limit
+  owner.md           whose CV this is, and where their details live
   experience.md  education.md  projects.md
   skills.md      learning.md   activities.md
   _gaps.md           open questions worth answering
@@ -81,6 +83,36 @@ build.sh              compiles main.tex files to PDF
 `profile/` grows whenever something happens. `base/` changes only when that
 something is worth a place on the one-pager, and is never bent to fit a particular
 posting.
+
+## Using this for your own CV
+
+The repository is built to be cloned. Everything except `profile/` and `base/` is
+generic — the templates, the build script and the rules Claude follows work for
+anyone.
+
+```bash
+git clone https://github.com/amo-grau/auto-cv.git my-cv && cd my-cv
+```
+
+Then, in a Claude Code session there:
+
+```
+/bootstrap
+```
+
+It replaces my information everywhere it lives — the identity record, both LaTeX
+documents, the whole inventory, the signature image — then interviews you section
+by section and compiles your documents. Expect it to push back: vague answers make
+weak CVs, so it asks for the model names, the numbers and the outcomes until each
+bullet contains something only you could have written.
+
+Two things to do yourself:
+
+- **Detach the history.** Your clone still contains my CV data in its git history
+  and points at my repository. Before pushing anywhere, either `rm -rf .git &&
+  git init` or point `origin` at your own empty repo.
+- **Add your signature** as `base/letter/sig.jpg`. It is gitignored, and the letter
+  compiles without it.
 
 ## Setup
 

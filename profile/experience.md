@@ -1,7 +1,7 @@
 # Experience
 
 Seeded from the existing CV and motivation letter. Detail marked `?` is unconfirmed
-and tracked in `_gaps.md` — do not put it on a CV until Oscar confirms it.
+and tracked in `_gaps.md` — do not put it on a CV until the owner confirms it.
 
 ## Backend robotics software developer — Yaskawa Europe GmbH
 

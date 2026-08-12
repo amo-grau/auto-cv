@@ -1,6 +1,6 @@
 # Profile — the inventory
 
-Everything Oscar has done that could ever belong on a CV, with no page limit and
+Everything the owner has done that could ever belong on a CV, with no page limit and
 no editing for length. This is the **content source of truth**.
 
 `base/cv/main.tex` is not the inventory. It is one rendering of it: a general
@@ -34,7 +34,7 @@ and the number in the first clause.
 
 ## Rules
 
-- Only what Oscar has confirmed. Same truthfulness bar as everywhere else in this
+- Only what the owner has confirmed. Same truthfulness bar as everywhere else in this
   repo — an unverified detail belongs in `_gaps.md`, not in an entry.
 - Never delete an entry because it is currently irrelevant. Irrelevant today is
   the right fit two postings from now.

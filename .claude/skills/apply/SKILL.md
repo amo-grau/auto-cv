@@ -1,11 +1,11 @@
 ---
 name: apply
-description: Run a full job application from a posting URL — fetch and read the offer, create applications/<company>-<role>/, re-select CV and cover letter content from profile/ to match it, compile, and verify. Use whenever Oscar says he wants to apply to a position, sends a job posting link, or pastes a job description.
+description: Run a full job application from a posting URL — fetch and read the offer, create applications/<company>-<role>/, re-select CV and cover letter content from profile/ to match it, compile, and verify. Use whenever the owner says they want to apply to a position, sends a job posting link, or pastes a job description.
 ---
 
 # Applying to a position
 
-Runs end to end from a link. Oscar's part is one URL; everything after it is this
+Runs end to end from a link. The owner's part is one URL; everything after it is this
 skill's job. Read `CLAUDE.md` for the repository's rules — especially that nothing
 may be invented, and that tailoring means **re-selecting from `profile/`**, not
 trimming `base/`.
@@ -27,8 +27,8 @@ banner, or an empty JS shell instead of the posting. LinkedIn in particular is
 usually unfetchable. Treat the fetch as failed if the result has no role title, no
 responsibilities, or reads like a sign-in page.
 
-On failure, do not guess and do not proceed on a thin result: tell Oscar the fetch
-was blocked and ask him to paste the posting text. That is a normal outcome, not
+On failure, do not guess and do not proceed on a thin result: tell the owner the fetch
+was blocked and ask them to paste the posting text. That is a normal outcome, not
 an error worth apologising for.
 
 ## Step 2 — Set up the folder
@@ -61,7 +61,7 @@ decide what earns a place on this specific page.
 - Drop what does not serve this application. It stays in `profile/`.
 - Mirror the posting's vocabulary where it honestly describes existing work.
 - Never add a skill, tool or claim that is not already in `profile/`. If the
-  posting demands something Oscar genuinely lacks, note it for the final report
+  posting demands something the owner genuinely lacks, note it for the final report
   rather than papering over it.
 
 ## Step 4 — Write the documents
@@ -78,8 +78,8 @@ boilerplate, no marketing adjectives, no closing sentence that restates the lett
 A letter that reads as generated is worse than no letter; recruiters check for this
 now. Specific detail is what keeps it human *and* what the screening filter wants.
 
-If the posting is written in German, ask Oscar whether he wants the letter in
-German before writing it. Do not decide that for him.
+If the posting is written in German, ask the owner whether they want the letter in
+German before writing it. Do not decide that for them.
 
 ## Step 5 — Compile and verify
 
@@ -103,12 +103,12 @@ that looks right in the PDF but breaks extraction is a failed change.
 ## Step 6 — Record and report
 
 Write `applications/<slug>/notes.md`: what was selected and why, what was pulled
-in from `profile/`, what was dropped, and any requirement Oscar does not meet.
+in from `profile/`, what was dropped, and any requirement the owner does not meet.
 
-Then report to Oscar in a few lines:
+Then report to the owner in a few lines:
 
 - Where the files are and that both compiled to one page.
 - The main tailoring decisions.
-- **Any mismatch between him and the posting** — say it plainly.
+- **Any mismatch between the owner and the posting** — say it plainly.
 - Anything in `profile/_gaps.md` that would have strengthened this application if
   it had been answered. This is the moment that question is most worth asking.
