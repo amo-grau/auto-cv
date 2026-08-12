@@ -30,6 +30,9 @@ applications/
     notes.md            what was changed and why
     cv/
     letter/
+.claude/skills/
+  bootstrap/            mode 1 — build from scratch for a new owner
+  apply/                mode 3 — full application from a posting URL
 build.sh                latexmk wrapper
 ```
 
@@ -211,6 +214,8 @@ Look for and say plainly:
   would not follow.
 - Gaps and inconsistencies: unexplained date gaps, tense drift, inconsistent
   formatting between entries.
+- Prose that reads as machine-generated — see the Voice section. Existing text is
+  not exempt from that standard just because it was written before the standard.
 
 Be direct and concrete: name the line, say why it is weak, propose the
 replacement. Do not soften feedback into uselessness — but do not rewrite content
@@ -285,6 +290,33 @@ replace it with something only the owner could write.
 - The CV is one page. The letter is one page.
 - After any change, rebuild and read the extracted text — not just the page count.
 - Nothing company-specific ever enters `base/`.
+
+## Known issues, not yet fixed
+
+Raised and deliberately left alone — the owner has not decided on them. Do not fix
+these silently as a side effect of other work; they change the documents the owner
+actually sends.
+
+**Letter, ATS (mode 2).** Its contact details are encoded next to `fontawesome5`
+icons and extract as `#` and `*`, so a parser reading the letter finds no email or
+phone. The letter is also justified and hyphenates, splitting keywords across
+lines (`de-veloping` no longer matches `developing`).
+
+**CV, ATS (mode 2).** Dates read `09.2023`, which is ambiguous month/year to a
+parser; `Sep 2023` or `09/2023` is safer. "Professional Development" is a
+non-standard heading and parsers match headings literally. There is no summary
+line at the top stating role, core languages and years of experience — usually the
+first thing an LLM filter reads.
+
+**Letter, voice.** `base/letter/body.tex` predates the Voice section and breaks it
+in several places: "state-of-the-art", "deeply committed", "I am excited about the
+opportunity to contribute my technical skills and my global mindset", and a fifth
+paragraph whose two sentences say the same thing with no information in either.
+Paragraphs 2 and 3 are the good ones — they contain real systems and real work.
+
+**Content.** Almost no bullet carries a number, and three years at Yaskawa are
+described in four bullets that all read as if written in the first six months. See
+`profile/_gaps.md`.
 
 ## Compiling
 

@@ -42,9 +42,18 @@ carries a stranger's details.
 | Old applications | `applications/` | delete if present — those are someone else's applications |
 | Owner references | any `Oscar`/name left in `profile/` or `base/` | none should remain |
 
+Two more, easy to overlook because they are instruction files rather than content:
+
+| What | Where | Action |
+| --- | --- | --- |
+| Known issues | `CLAUDE.md` → "Known issues, not yet fixed" | delete the entries — they describe the previous owner's documents. Refill it as issues in the new owner's documents come up. |
+| Clone URL and asides | `README.md` → "Using this for your own CV" | repoint the clone URL at the new owner's repository and drop the first-person references to the previous one. |
+
+The rest of `CLAUDE.md`, `README.md` and the skills say "the owner" throughout and
+need no editing.
+
 Verify at the end with a grep for the previous owner's name, email, phone and
-handles. Nothing may survive in a tracked file. `CLAUDE.md`, `README.md` and the
-skills are written to say "the owner" and need no editing.
+handles across all tracked files. Nothing may survive.
 
 ## Step 2 — Interview
 

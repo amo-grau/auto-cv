@@ -77,6 +77,9 @@ base/
     body.tex           the prose
     sig.jpg            scanned signature (gitignored — see Privacy)
 applications/         one directory per application — local only, never pushed
+.claude/skills/
+  bootstrap/          /bootstrap — build from scratch for a new owner
+  apply/              /apply <url> — full application from a posting link
 build.sh              compiles main.tex files to PDF
 ```
 
@@ -86,9 +89,9 @@ posting.
 
 ## Using this for your own CV
 
-The repository is built to be cloned. Everything except `profile/` and `base/` is
-generic — the templates, the build script and the rules Claude follows work for
-anyone.
+The repository is built to be cloned. The templates, the build script and the rules
+Claude follows are all person-agnostic; only `profile/` and the content of `base/`
+are mine.
 
 ```bash
 git clone https://github.com/amo-grau/auto-cv.git my-cv && cd my-cv
