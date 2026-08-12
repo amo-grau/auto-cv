@@ -3,15 +3,18 @@
 Work worth naming on its own, separate from the job that contained it — including
 personal and open-source work.
 
-## Pick-and-place trade fair application — Yaskawa
+## Pick Anything — Yaskawa
 
-- **When:** during 09.2023 – Present
+- **When:** built for Automatica 2025; still in service
 - **Tags:** computer-vision, grasp-detection, object-detection,
-  instance-segmentation, path-planning, ros, grpc, python, docker, jetson, demo
+  instance-segmentation, path-planning, collision-avoidance, ros, grpc, python,
+  docker, jetson-orin, yaskawa-next, trade-show, ownership
 - **Link:** https://www.youtube.com/watch?v=cLZ84RRqHHs
 
-Full description in `experience.md`. Listed here because it is demonstrable on
-video, which is rare and worth leading with.
+Full description in `experience.md`. Listed separately because it is the single
+strongest item available: he owns it, it is demonstrable on video, it carries real
+measurements, and it was replicated by another Yaskawa region and rebuilt twice
+more. Lead with this unless a posting makes something else more relevant.
 
 ## Master's thesis — pick-and-place with AI pose estimation
 

@@ -8,21 +8,18 @@ Delete a question once its answer has been folded into the relevant entry.
 
 Last interview: 12.08.2026.
 
-## Blocking — answer before the next application
+## Standing constraint — NDA
 
-- **NDA scope on the current project.** OCR with AI plus HALCON measurement work.
-  How much can go on a CV? Options, narrowest first: say nothing; "computer vision
-  project under NDA"; name the techniques (OCR, HALCON) without the application;
-  name the application. Nothing goes on a CV until this is settled.
+Settled 12.08.2026. On the current project the **technologies may be named, the
+application may not**: OCR model training and deployment, and HALCON computer
+vision, are fine; what it is used for, for whom, and in which product are not.
+Applies to CVs, letters and interviews alike.
 
 ## Needs a number
 
-- **Pick Anything.** Still missing: how many distinct objects it could handle,
-  which Jetson model, which trade fair and when, how long it ran, whether it is
-  still in use or being reused by other teams.
-  *(Answered 12.08.2026: 40 ms segmentation inference, 5 ms grasp selection,
-  500 ms collision environment + planning in parallel, >95% grasp success
-  conditional on a path being found.)*
+- **Pick Anything.** One loose end: the count of reviewed projects. Four projects
+  were stated, three named (Yaskawa NEXT course preparation, the Pick Anything
+  fair cell, an AI pipeline). What is the fourth?
 - **Inference-optimization Docker container.** How much faster? Compared to what
   baseline? Which models, which Jetson model? Is it used by other teams?
 - **AI training/deployment platform.** How many models, how many users, how much
@@ -39,11 +36,10 @@ Last interview: 12.08.2026.
 ## Needs confirming
 
 - **Course completion dates** — all four courses in `learning.md` are undated.
-- **Code review and merge ownership.** Roughly how many developers' work is
-  reviewed, and across how many projects? "Reviews code and owns merges to main
-  across N projects" is far stronger than the same claim without N.
 - **Teaching hexagonal architecture.** Informal one-to-one, or sessions to the
   team? How many people? Anything written down that others still use?
+- **Pick Anything ownership boundary.** Sole developer, or lead of a small group?
+  A reader will ask, and "owns" means different things either way.
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.

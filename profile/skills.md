@@ -11,17 +11,18 @@ C++, Python, C#, Java, HTML and CSS.
 
 ## Frameworks and libraries
 
-- **Tags:** ros, grpc, pytorch, onnx, opencv, pandas, numpy, matplotlib
+- **Tags:** ros, grpc, pytorch, onnx, opencv, halcon, ocr, pandas, numpy,
+  matplotlib
 
-ROS, gRPC, PyTorch, ONNX, OpenCV, pandas, NumPy, Matplotlib.
+ROS, gRPC, PyTorch, ONNX, OpenCV, HALCON, pandas, NumPy, Matplotlib.
 
 ## Tools and platforms
 
-- **Tags:** docker, git, isaac-sim, jetson, vs-code, visual-studio, jupyter,
-  beckhoff, plc, mysql
+- **Tags:** docker, git, isaac-sim, jetson, jetson-orin, yaskawa-next, vs-code,
+  visual-studio, jupyter, beckhoff, plc, mysql
 
-Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson boards, VS Code, Visual Studio,
-Jupyter Notebooks, Beckhoff PLC, MySQL.
+Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson (including Jetson Orin), Yaskawa NEXT
+controller, VS Code, Visual Studio, Jupyter Notebooks, Beckhoff PLC, MySQL.
 
 ## Software engineering practice
 

@@ -8,11 +8,11 @@ CV until the owner confirms it.
 
 - **When:** 09.2023 – Present
 - **Where:** Munich, Germany
-- **Tags:** c++, c#, python, ros, docker, grpc, jetson, edge-ai, computer-vision,
-  grasp-detection, object-detection, instance-segmentation, path-planning,
-  collision-avoidance, ocr, halcon, onnx, pytorch, tdd, hexagonal-architecture,
-  code-review, technical-leadership, mentoring, agile, industrial-robotics,
-  cobots, palletizing, welding
+- **Tags:** c++, c#, python, ros, docker, grpc, jetson, jetson-orin, yaskawa-next,
+  edge-ai, computer-vision, grasp-detection, object-detection,
+  instance-segmentation, path-planning, collision-avoidance, ocr, halcon, onnx,
+  pytorch, tdd, hexagonal-architecture, code-review, technical-leadership,
+  mentoring, agile, industrial-robotics, cobots, palletizing, welding, trade-show
 
 Official title is **Robotics Software Engineer**; no promotion since joining.
 Confirmed 08.2026 — the old CV said "Backend robotics software developer" and the
@@ -26,15 +26,35 @@ as scope, not as rank.
 - Owns **Pick Anything**, the trade-show pick-and-place application (below).
 - Owns the vision-based AI software stack for training and deploying open-source
   AI models — the platform other applications build on.
-- Reviews other developers' code on every project he works on, and is the
-  developer who merges to main on all of them.
+- Reviews the code of around **4 developers across 4 projects**, and is the
+  developer who merges to main on every project he works on. Not part of his
+  formal job description. Named projects: a course preparation for learning
+  Yaskawa NEXT, the Pick Anything fair cell, and an AI pipeline.
 - Works to hexagonal architecture and teaches it to other developers on the team.
 
 ### Pick Anything — trade-show pick-and-place application
 
 [Video](https://www.youtube.com/watch?v=cLZ84RRqHHs). AI-driven picking with
 automatic path planning and collision avoidance, running in a Docker container on
-an NVIDIA Jetson board.
+an **NVIDIA Jetson Orin** embedded in the **Yaskawa NEXT** controller.
+
+Built first for **Automatica 2025**, Munich.
+
+Scope:
+
+- Handles **more than 10 distinct object types** and retrains easily for more.
+  Fruits and baskets as targets, wall blocks as obstacles to avoid.
+- The user selects what to grasp; the system plans around everything else.
+
+**Adoption — the strongest evidence on this CV:**
+
+- Shipped to trade fairs across Europe.
+- **Yaskawa USA built their own copy** to tour fairs in the United States.
+- A third copy is being built for the German showroom, for customer demonstrations
+  on site.
+- Internally described as the most advanced cell Yaskawa has outside Japan.
+  *Use that phrasing carefully — it is an internal assessment, not a published
+  claim. The replication across regions is the fact; it speaks for itself.*
 
 Measured performance:
 
@@ -57,9 +77,15 @@ Measured performance:
 
 ### Current project (under NDA)
 
-- OCR using AI, plus measurement work with HALCON. Details cannot be shared.
-- **Check before putting any of this on a CV** — see `_gaps.md`. Even naming the
-  domain may be more than the agreement allows.
+**Disclosure settled 12.08.2026: the technologies may be named, the application may
+not.** Write about the tools and the work; never about what it is used for, which
+customer, or which product.
+
+- Trains and deploys AI models for **OCR**.
+- Uses **HALCON** for computer vision tasks.
+
+Safe phrasing: "Training and deploying AI models for OCR, and computer vision work
+with HALCON." Anything answering *what for* is out of bounds.
 
 ### Earlier work
 
