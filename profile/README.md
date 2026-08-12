@@ -68,6 +68,13 @@ asks otherwise, but this is the default order.
 - **HALCON.** Real experience, but he does not want a HALCON-centric role. Never
   lead with it; never target roles built around it. See `learning.md`.
 
+**Never write:**
+
+- **The absence of a senior title.** Decided 12.08.2026. Phrases like "without
+  holding a senior title" or "despite not being senior" do not go on a CV or in a
+  letter. Describe the scope — ownership, code review, merge authority, teaching —
+  and let it speak for itself. Do not reintroduce this on a later pass.
+
 **Rarely select:**
 
 - Smart welding and palletizing — only for welding, logistics or C#/.NET roles.
