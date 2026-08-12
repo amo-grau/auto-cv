@@ -3,10 +3,21 @@
 My CV and motivation letter in LaTeX, and the machinery to keep them current and
 tailor them to a specific job posting without rewriting either from scratch.
 
-The idea: `base/` holds one honest, complete version of each document. Every
-application gets a copy that is trimmed and reordered for that posting — the same
-facts, told in the order that particular employer cares about. The work is done
-with Claude Code, which follows the rules in [CLAUDE.md](CLAUDE.md).
+The idea: `profile/` records everything I have done, uncut. A CV is a *selection*
+from it, sized to one page and chosen to match whoever is reading. The work is
+done with Claude Code, which follows the rules in [CLAUDE.md](CLAUDE.md).
+
+```
+profile/            everything, uncut          <- new facts land here first
+  ↓ select
+base/cv/            default one-pager
+  ↓ select + reorder
+applications/…/cv/  one-pager for one posting
+```
+
+That split is the whole point. A one-page CV means constant cutting, and anything
+cut from a single master document is gone. Here it stays in the inventory and
+comes back for the next posting that rewards it.
 
 ## What it does
 
@@ -22,15 +33,19 @@ to real characters. The test is `pdftotext -layout` — what it prints is what t
 filter reads.
 
 **3. Tailor to a job offer.** I paste a posting; Claude creates
-`applications/<company>-<role>/`, copies both documents in, and reorders and prunes
-them to match — selecting from what is already true, never inventing.
+`applications/<company>-<role>/` and re-selects from the inventory to match it —
+pulling in what fits, dropping what doesn't. Entries missing from my default CV
+can appear here; every tagged entry is a candidate.
 
 **4. Keep the information current.** New job, finished course, book read, project
-shipped: it goes into `base/`. The CV is one page, so every addition forces an
-explicit removal.
+shipped: it goes into `profile/` at full length, then Claude decides separately
+whether it displaces something on the one-pager. Nothing gets lost for lack of
+space.
 
 **5. Give feedback on the content.** Flagging what no longer earns its space, which
-bullets describe duties instead of outcomes, and where a number is missing.
+bullets describe duties instead of outcomes, and where a number is missing. Open
+questions accumulate in [profile/_gaps.md](profile/_gaps.md) — answering them
+improves every future CV at once.
 
 Throughout: nothing is added that I have not confirmed. Tailoring selects and
 rephrases what is true — it does not invent.
@@ -40,6 +55,10 @@ rephrases what is true — it does not invent.
 Each document is a directory with a `main.tex` inside it.
 
 ```
+profile/             the inventory — everything, uncut, no page limit
+  experience.md  education.md  projects.md
+  skills.md      learning.md   activities.md
+  _gaps.md           open questions worth answering
 base/
   cv/main.tex        the CV — one page, ATS-parsable, no images
   letter/            the motivation letter
@@ -51,8 +70,9 @@ applications/         one directory per application — local only, never pushed
 build.sh              compiles main.tex files to PDF
 ```
 
-`base/` changes only when something changes in real life. It is never bent to fit
-a particular posting.
+`profile/` grows whenever something happens. `base/` changes only when that
+something is worth a place on the one-pager, and is never bent to fit a particular
+posting.
 
 ## Setup
 
@@ -80,7 +100,8 @@ each one, since both documents are meant to be a single page.
 
 1. Create `applications/<company>-<role>/` and drop the posting in as `offer.md`.
 2. `cp -r base/cv base/letter applications/<company>-<role>/`.
-3. Tailor the copies: reorder and prune, never invent.
+3. Re-select from `profile/` against the posting, then tailor the wording —
+   reorder and prune, never invent.
 4. `./build.sh applications/<company>-<role>`, check the page counts, send.
 
 ## Privacy

@@ -1,0 +1,42 @@
+# Skills
+
+Order here is not the order on the CV — that is chosen per posting, leading with
+what the posting asks for.
+
+## Programming languages
+
+- **Tags:** c++, python, c#, java, html, css
+
+C++, Python, C#, Java, HTML and CSS.
+
+## Frameworks and libraries
+
+- **Tags:** ros, grpc, pytorch, onnx, opencv, pandas, numpy, matplotlib
+
+ROS, gRPC, PyTorch, ONNX, OpenCV, pandas, NumPy, Matplotlib.
+
+## Tools and platforms
+
+- **Tags:** docker, git, isaac-sim, jetson, vs-code, visual-studio, jupyter,
+  beckhoff, plc, mysql
+
+Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson boards, VS Code, Visual Studio,
+Jupyter Notebooks, Beckhoff PLC, MySQL.
+
+## Software engineering practice
+
+- **Tags:** tdd, solid, hexagonal-architecture, design-patterns, ddd, clean-code,
+  refactoring, agile, software-craftsmanship
+
+Test-Driven Development, SOLID principles, Hexagonal Architecture, Design
+Patterns, Domain-Driven Design, refactoring, Agile. Studied deliberately and
+applied at work — see `learning.md`.
+
+## Languages
+
+- **Tags:** spanish, catalan, english, german, multilingual
+
+- Spanish — mother tongue
+- Catalan — mother tongue
+- English — C1
+- German — B2

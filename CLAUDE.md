@@ -11,7 +11,11 @@ not anywhere else.
 Every document is a directory containing a `main.tex`.
 
 ```
-base/                   master documents — the superset of everything true
+profile/                the inventory — everything, uncut, no page limit
+  experience.md  education.md  projects.md  skills.md
+  learning.md    activities.md
+  _gaps.md              open questions about existing entries
+base/                   default one-page rendering of the inventory
   cv/main.tex
   letter/               main.tex + info.tex (variables) + body.tex (prose) + sig.jpg
 applications/
@@ -24,6 +28,27 @@ build.sh                latexmk wrapper
 ```
 
 `applications/` is gitignored in full — it is local-only and never pushed.
+
+## The inventory is the content source of truth
+
+`profile/` holds everything Oscar has done, at full length, with no page limit.
+`base/cv/` is not the master list — it is one *selection* from `profile/`, sized to
+one page. A tailored CV is a different selection from the same inventory.
+
+```
+profile/            everything, uncut          <- new facts land here first
+  ↓ select
+base/cv/            default one-pager
+  ↓ select + reorder
+applications/…/cv/  one-pager for one posting
+```
+
+This is what makes the one-page limit safe: content cut from a CV is not lost, it
+is simply not selected this time, and it can return for the next posting that
+rewards it. **Never delete an entry from `profile/` for being irrelevant today.**
+
+Every entry carries `Tags:` — lowercase keywords. Matching a posting against those
+tags is the first step of selection, not a substitute for judgement.
 
 The letter splits cleanly: `info.tex` holds the per-application variables
 (`\company`, `\position`, `\team`, `\city`, `\recipient`) and `body.tex` holds the
@@ -41,8 +66,8 @@ acting; if genuinely ambiguous, ask.
 Trigger: the base documents are empty, being rebuilt, or a whole section has no
 content yet.
 
-Fill the templates by **interviewing Oscar**. Do not write placeholder content and
-do not guess. Rules for the interview:
+Fill `profile/` first by **interviewing Oscar**, then render `base/` from it. Do
+not write placeholder content and do not guess. Rules for the interview:
 
 - Ask about one section at a time; do not dump twenty questions at once.
 - **Insist on specifics.** A first answer is almost always too vague to use. If he
@@ -95,10 +120,16 @@ Trigger: Oscar sends a job posting.
 1. Create `applications/<company>-<role>/` and save the posting verbatim to
    `offer.md`.
 2. `cp -r base/cv base/letter applications/<company>-<role>/`.
-3. Tailor the copies (rules below).
-4. `./build.sh applications/<company>-<role>`, check the page counts, and read the
+3. **Re-select from `profile/`, do not merely trim `base/`.** Read the posting,
+   match it against the inventory's tags and entries, and decide what earns a
+   place on this particular page. An entry absent from `base/cv/` may well belong
+   on this one — `activities.md` and the deeper bullets in `experience.md` exist
+   precisely for that.
+4. Tailor the wording (rules below).
+5. `./build.sh applications/<company>-<role>`, check the page counts, and read the
    `pdftotext` output.
-5. Record in `notes.md` what changed and why.
+6. Record in `notes.md` what changed and why — including what was pulled in from
+   `profile/` and what was dropped.
 
 Tailoring rules:
 
@@ -125,13 +156,17 @@ Tailoring rules:
 Trigger: something changes in real life — a new role or promotion, a shipped
 project, a finished course, a book read, a new tool used seriously.
 
-- Update `base/` — this is the only mode that edits the master documents for
-  content.
+- **It goes into `profile/` first, always.** The inventory has no page limit, so
+  record it at full length with tags — even if it will not make the CV today.
 - Ask the same specific questions as mode 1 before writing the entry. A new line
   earns its place with detail, not with its existence.
 - Convert relative dates ("last month") to absolute ones before writing them down.
-- **The CV is one page, so every addition forces a removal.** Say what you propose
-  to cut and why; do not silently spill onto a second page.
+- Then decide separately whether it displaces something in `base/cv/`. It often
+  should not, and that is fine — it is safely recorded either way.
+- **The CV is one page, so every addition to it forces a removal.** Say what you
+  propose to cut and why; do not silently spill onto a second page. What is cut
+  remains in `profile/`.
+- If the new fact answers something in `profile/_gaps.md`, delete that question.
 - The letter changes far less often. Update it only when the new fact changes the
   story it tells — a new job, a change of field. A finished course does not.
 - Rebuild afterwards and confirm both documents still fit on one page.
@@ -158,7 +193,12 @@ Look for and say plainly:
 
 Be direct and concrete: name the line, say why it is weak, propose the
 replacement. Do not soften feedback into uselessness — but do not rewrite content
-in `base/` on the strength of an opinion alone. Propose, then let Oscar decide.
+in `base/` or `profile/` on the strength of an opinion alone. Propose, then let
+Oscar decide.
+
+`profile/_gaps.md` is the standing form of this mode: every unanswered question
+there is feedback already given. Keep it current, raise items from it when they
+become relevant, and prefer asking one well-aimed question over listing ten.
 
 ---
 
@@ -166,7 +206,8 @@ in `base/` on the strength of an opinion alone. Propose, then let Oscar decide.
 
 - **Truthfulness is absolute.** Never add a skill, tool, employer, date, metric or
   claim that Oscar has not confirmed. This applies to bootstrap, tailoring and
-  updates alike.
+  updates alike, and to `profile/` as much as to the rendered documents.
+- New facts enter through `profile/`, never straight onto a CV.
 - The CV is one page. The letter is one page.
 - After any change, rebuild and read the extracted text — not just the page count.
 - Nothing company-specific ever enters `base/`.
