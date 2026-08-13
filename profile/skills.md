@@ -5,13 +5,21 @@ what the posting asks for.
 
 ## Programming languages
 
-- **Tags:** c++, python, c#, java, html, css
+- **Tags:** python, c#, c++, java, html, css
 
-C++, Python, C#, Java, HTML and CSS.
+Python, C#, C++, Java, HTML and CSS.
 
-**Programming since 2021** (confirmed 12.08.2026). Say it that way rather than
-attaching a year to individual languages: the record only supports C++ from
-03.2022 (Construction Robotics) and C# from 09.2023 (Yaskawa welding work), so
+**Order matters and this one is deliberate** (12.08.2026). Python and C# are what
+he writes now — Python across the AI platform and PickAnything, C# on the current
+OCR project. **C++ is real but not current:** Construction Robotics (03.2022), the
+Franka API (04.2023), and the Jetson inference container. It goes third.
+
+Do not promote C++ to the front for a general application. Promote it only when a
+posting is genuinely C++-heavy, and know that "what have you written in C++
+lately?" is then a fair question with a dated answer.
+
+**Programming since 2021.** Say it that way rather than attaching a year to
+individual languages: the record supports C++ from 03.2022 and C# from 09.2023, so
 "C# since 2022" would be wrong. Python goes back furthest — it appears in the
 TRANE internship in 2020.
 

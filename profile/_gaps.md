@@ -39,11 +39,12 @@ Applies to CVs, letters and interviews alike.
 - **Teaching hexagonal architecture.** Answered: informal sessions, to help others
   contribute to his projects. Still open — how many people attended, and is any of
   it written down and still in use?
-- **How much C++ does he write today?** C# is answered — it is the language of the
-  current OCR project, and the welding bullet is back on the CV as the older
-  evidence. C++ is not: the recent work described is mostly Python, gRPC and ROS,
-  with C++ on the inference container. If a C++-heavy employer asks "what did you
-  write in C++ this year", there needs to be an answer.
+- **C++ is not current** (answered 12.08.2026). He is not using it in recent
+  projects; Python and C# are. Both documents now list Python and C# ahead of it.
+  The open question is a different one: **is a C++ role still the target?** If yes,
+  the honest gap is recent C++ practice, and something outside work — an
+  open-source contribution, a personal project — would close it faster than
+  anything else in this file.
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.
