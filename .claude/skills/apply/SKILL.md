@@ -60,9 +60,13 @@ decide what earns a place on this specific page.
   about teamwork, pressure or drive.
 - Drop what does not serve this application. It stays in `profile/`.
 - Mirror the posting's vocabulary where it honestly describes existing work.
-- Never add a skill, tool or claim that is not already in `profile/`. If the
-  posting demands something the owner genuinely lacks, note it for the final report
-  rather than papering over it.
+- Never add a skill, tool or claim that is not already in `profile/`.
+- **Never name a gap in the documents.** If the posting demands something the
+  owner lacks, that fact goes in the final report and in `notes.md` — never in the
+  CV or the letter. No "I have not used X", no hedging about how recent something
+  is, no pre-emptive apology. Write what is true and strong, and stop. The
+  documents stay honest because nothing is invented, not because weaknesses are
+  volunteered.
 
 ## Step 4 — Write the documents
 
@@ -117,6 +121,8 @@ Then report to the owner in a few lines:
 
 - Where the files are and that both compiled to one page.
 - The main tailoring decisions.
-- **Any mismatch between the owner and the posting** — say it plainly.
+- **Any mismatch between the owner and the posting** — say it plainly *here*, in
+  the report. This is the only place it appears; it is what lets him decide
+  whether to apply and prepare for the interview.
 - Anything in `profile/_gaps.md` that would have strengthened this application if
   it had been answered. This is the moment that question is most worth asking.

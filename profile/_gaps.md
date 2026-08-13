@@ -8,6 +8,16 @@ Delete a question once its answer has been folded into the relevant entry.
 
 Last interview: 12.08.2026.
 
+## Standing rules
+
+- **Never name a requirement he does not meet** in a CV or letter. No "I have not
+  used X", no hedging about how recent a skill is, no pre-emptive apology. The
+  mismatch is reported to him and written in the application's `notes.md`; it
+  never reaches the employer's copy. Set 13.08.2026 after a draft letter
+  volunteered that C++ was not his day-to-day language.
+- **MuJoCo: no experience.** Isaac Sim is the simulator he has used. Postings pair
+  the two constantly — never substitute one for the other.
+
 ## Standing constraint — NDA
 
 Settled 12.08.2026. On the current project the **technologies may be named, the

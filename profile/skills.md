@@ -30,6 +30,12 @@ TRANE internship in 2020.
 
 ROS, NVIDIA Isaac Sim, PyTorch, ONNX, OpenCV, HALCON, OCR.
 
+**Simulation:** Isaac Sim is the one he has worked with, and it can be claimed.
+**MuJoCo he has not** — postings in this field often ask for both, and it is a
+common substitution. Never write MuJoCo, and never let "simulation experience"
+stand in a way that implies it. Isaac Sim by name is the honest and sufficient
+answer.
+
 Machine vision beyond the model: trained in industrial lighting and illumination
 (LUMIMAX, 06.2026), which most vision engineers never cover.
 

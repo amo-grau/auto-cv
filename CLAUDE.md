@@ -195,8 +195,17 @@ Tailoring rules:
 - **The CV must stay on one page.** `build.sh` prints the page count of every PDF.
 - The letter is one page. Always set `\company` and `\position`; set `\team` and
   `\recipient` only when the posting actually names them.
-- If the posting demands something the owner genuinely lacks, say so plainly rather
-  than papering over it.
+- **Never name a requirement the owner does not meet, anywhere in the CV or the
+  letter.** No "I have not used X", no "C++ has not been my day-to-day language",
+  no pre-emptive apology, no hedge about a gap. An application is not the place to
+  argue against yourself: the reader will form their own view from what is there,
+  and a volunteered weakness is the one thing they are guaranteed to remember.
+  Write what is true and strong, and stop.
+  - This is not about hiding anything. Every claim stays truthful and nothing is
+    invented — the rule only forbids *drawing attention to absences*.
+  - Report the mismatch **to the owner**, in the chat and in `notes.md`, so he can
+    decide whether to apply and can prepare for the interview. That is where it
+    belongs. It never reaches the employer's copy.
 
 `base/` is never edited to fit a posting.
 
