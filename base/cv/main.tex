@@ -99,6 +99,11 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+% Nested bullets, for grouping several facts under one project
+\newcommand{\resumeSubList}{\vspace{-4pt}\begin{itemize}[label=\textendash, leftmargin=0.2in, topsep=2pt, itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeSubListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeSubBullet}[1]{\item\small{#1 \vspace{-2pt}}}
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -119,11 +124,9 @@
 %-----------SUMMARY-----------
 \section{Summary}
   \vspace{2pt}
-  \small{Robotics software engineer, three years at Yaskawa building vision-based AI for
-  industrial robots: model training, edge deployment on NVIDIA Jetson, motion planning and
-  collision avoidance. Main developer of the PickAnything cell, which now tours trade fairs
-  across Europe and the American circuit. C++ and Python since 2022; reviews code and owns
-  merges across three projects.}
+  \small{Robotics software engineer in Munich, three years at Yaskawa. Builds and deploys
+  vision-based AI on industrial robots, from training the models to running them on the
+  robot controller. C++ and Python since 2022.}
   \vspace{4pt}
 
 %-----------EXPERIENCE-----------
@@ -136,17 +139,20 @@
       \resumeItemListStart
         \resumeItem{Main developer of \textbf{PickAnything}, a
         \href{https://www.youtube.com/watch?v=cLZ84RRqHHs}{\underline{pick-and-place cell}}
-        combining instance segmentation, grasp detection and collision-aware path planning.
-        Runs in Docker on an NVIDIA Jetson Orin inside the Yaskawa NEXT controller, handles
-        more than 10 object types and retrains for more.}
-        \resumeItem{Measured: 40\,ms segmentation inference, 5\,ms grasp selection, 500\,ms
-        collision environment and planning run in parallel with the operator's selection.
-        Grasp success above 95\% when a path is found; when none exists the cell reports why
-        rather than failing silently.}
-        \resumeItem{Built for Automatica 2025 and since shipped to fairs across Europe.
-        Yaskawa USA built their own copy for the American circuit; a third is being built for
-        the German showroom. Integrated the interface, ladder-logic safety and obstacle mesh
-        generation written by others into the working cell.}
+        combining instance segmentation, grasp detection and collision-aware path planning.}
+        \resumeSubList
+          \resumeSubBullet{Runs in Docker on an NVIDIA Jetson Orin inside the Yaskawa NEXT
+          controller. Handles more than 10 object types and retrains for more.}
+          \resumeSubBullet{Measured: 40\,ms segmentation inference, 5\,ms grasp selection,
+          500\,ms collision environment and planning run in parallel with the operator's
+          selection. Grasp success above 95\% when a path is found; when none exists the
+          cell reports why rather than failing silently.}
+          \resumeSubBullet{Built for Automatica 2025 and since shipped to fairs across
+          Europe. Yaskawa USA built their own copy for the American circuit; a third is
+          being built for the German showroom.}
+          \resumeSubBullet{Integrated the interface, ladder-logic safety and obstacle mesh
+          generation written by others into the working cell.}
+        \resumeSubListEnd
         \resumeItem{Own the vision-based AI platform other applications build on: training
         and deploying open-source models for grasp detection, object detection and instance
         segmentation, in Python, gRPC and ROS, containerised for Jetson boards.}
