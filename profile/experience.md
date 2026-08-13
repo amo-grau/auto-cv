@@ -106,20 +106,21 @@ customer, or which product.
 
 - Trains and deploys AI models for **OCR**.
 - Uses **HALCON** for computer vision tasks.
+- Written in **C#** — confirmed 12.08.2026. This is the current, present-tense
+  evidence for C#; the welding applications are the older evidence.
 
-Safe phrasing: "Training and deploying AI models for OCR, and computer vision work
-with HALCON." Anything answering *what for* is out of bounds.
+Safe phrasing: "Training and deploying AI models for OCR, in C#, and computer
+vision work with HALCON." Anything answering *what for* is out of bounds.
 
-### Earlier work — low selection priority
-
-Kept in full, but rarely worth page space against the current targets. Select only
-when a posting specifically rewards it: welding for arc/welding automation roles,
-palletizing for logistics, C# for a .NET-heavy team.
+### Earlier work
 
 - Designed and developed smart welding applications running on the Smart Pendant
   of Yaskawa collaborative robot arms, in C#, using Agile and Test-Driven
-  Development.
-- Worked on smart palletizing applications.
+  Development. **Back on the default CV** as of 12.08.2026: it is the older of the
+  two pieces of C# evidence, and without it C# was claimed in the summary with
+  nothing on the page to support it.
+- Worked on smart palletizing applications. Low priority — select for logistics
+  postings.
 
 ## Working Student, Chair for Neuro-prosthetics — TUM
 
