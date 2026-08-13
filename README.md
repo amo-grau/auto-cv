@@ -77,6 +77,7 @@ base/
     body.tex           the prose
     sig.jpg            scanned signature (gitignored — see Privacy)
 applications/         one directory per application — local only, never pushed
+reflow.py             joins PDF-extracted lines back into sentences
 .claude/skills/
   bootstrap/          /bootstrap — build from scratch for a new owner
   apply/              /apply <url> — full application from a posting link
@@ -132,12 +133,17 @@ sudo apt install -y texlive-latex-extra texlive-fonts-recommended \
 ./build.sh                          # everything under base/
 ./build.sh base/cv                  # one document
 ./build.sh applications/<name>      # one application
-
-pdftotext -layout base/cv/build/main.pdf -   # see what a screening filter sees
 ```
 
-PDFs land in `<document dir>/build/main.pdf`. The script prints the page count of
-each one, since both documents are meant to be a single page.
+Each build writes two files into `<document dir>/build/`:
+
+- `main.pdf` — the document to send. The script prints its page count, since both
+  documents are meant to be a single page.
+- `main.txt` — the same content as plain text, with wrapped lines joined back into
+  sentences. This is the one to paste into an application form or an AI tool.
+
+Copying directly out of a PDF viewer always breaks lines mid-sentence, because a
+PDF stores text one visual line at a time. `main.txt` exists to avoid that.
 
 ## Applying to a job
 

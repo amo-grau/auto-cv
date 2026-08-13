@@ -31,6 +31,13 @@ for tex in "${docs[@]}"; do
                             -outdir=build main.tex >/dev/null ); then
     pages="$(pdfinfo "$dir/build/main.pdf" 2>/dev/null | awk '/^Pages:/{print $2}')"
     echo "   ok  -> ${dir#"$ROOT"/}/build/main.pdf (${pages:-?} page(s))"
+    # Plain-text copy for pasting into application forms and AI tools. A PDF
+    # breaks every wrapped line, so reflow.py joins them back into sentences.
+    if command -v pdftotext >/dev/null 2>&1; then
+      pdftotext -layout -nopgbrk "$dir/build/main.pdf" - 2>/dev/null \
+        | python3 "$ROOT/reflow.py" > "$dir/build/main.txt" || true
+      echo "       ${dir#"$ROOT"/}/build/main.txt (paste-ready text)"
+    fi
   else
     echo "   FAILED - see ${dir#"$ROOT"/}/build/main.log" >&2
     status=1

@@ -1,45 +1,26 @@
 %-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+% CV — Oscar Amo Grau
+% Originally based on Jake Gutierrez's template (MIT), since restructured.
+%
+% Layout rules:
+%   * All vertical spacing is controlled by the four lengths below and by
+%     enumitem list keys. There are no manual \vspace corrections anywhere in
+%     the document — if spacing looks wrong, change a length here, not inline.
+%   * The document must stay on one page and must survive `pdftotext -layout`.
+%-------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
+% Margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -47,176 +28,181 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
-\raggedright
+\raggedright                 % no hyphenation: keywords stay whole for parsers
 \setlength{\tabcolsep}{0in}
+\pagestyle{empty}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
+% Map glyphs back to real characters so the PDF extracts as text
 \pdfgentounicode=1
 
 %-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+% Spacing — the single place to tune the document
+\newlength{\entrysep}   \setlength{\entrysep}{3pt}   % between jobs / degrees
+\newlength{\bulletsep}  \setlength{\bulletsep}{1.5pt}  % between bullets
+\newlength{\headgap}    \setlength{\headgap}{2pt}    % entry heading to its bullets
+\newlength{\blocksep}   \setlength{\blocksep}{1pt}   % inside Skills / Training blocks
+
+% Section headings: equal space above and below, everywhere
+\titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+%-------------------------
+% Structure
+
+% One job, degree, or similar entry.
+% #1 role/institution  #2 dates  #3 employer/degree  #4 location
+% No trailing \\ on the second row: an empty final row would add a phantom
+% line that then needs a negative \vspace to hide.
+\newcommand{\resumeSubheading}[4]{%
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4}
+  \end{tabular*}%
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+% A named project inside an entry. #1 name/description  #2 dates
+\newcommand{\resumeProjectHeading}[2]{%
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2
+  \end{tabular*}%
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+% List of entries (jobs, degrees)
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt, itemsep=\entrysep, parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% Nested bullets, for grouping several facts under one project
-\newcommand{\resumeSubList}{\vspace{-4pt}\begin{itemize}[label=\textendash, leftmargin=0.2in, topsep=2pt, itemsep=0pt, parsep=0pt]}
-\newcommand{\resumeSubListEnd}{\end{itemize}\vspace{-4pt}}
-\newcommand{\resumeSubBullet}[1]{\item\small{#1 \vspace{-2pt}}}
+% Bullets under one entry
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=0.3in, label=\textbullet, topsep=\headgap, itemsep=\bulletsep, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item \small{#1}}
+
+% Sub-bullets, for grouping several facts under one project.
+% Labelled with an en dash: the default nested marker extracts as an asterisk.
+\newcommand{\resumeSubList}{%
+  \begin{itemize}[leftmargin=0.22in, label=\textendash, topsep=\bulletsep, itemsep=\bulletsep, parsep=0pt]}
+\newcommand{\resumeSubListEnd}{\end{itemize}}
+\newcommand{\resumeSubBullet}[1]{\item \small{#1}}
+
+% Unbulleted block, for Skills and Training
+\newcommand{\resumeBlockStart}{%
+  \begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt, itemsep=\blocksep, parsep=0pt]}
+\newcommand{\resumeBlockEnd}{\end{itemize}}
+\newcommand{\resumeBlockLine}[2]{\item \small{\textbf{#1}: #2}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Oscar Amo Grau} \\ \vspace{2pt}
-    \small Robotics Software Engineer $|$ Munich, Germany \\ \vspace{2pt}
-    \small +49 15757815031 $|$
-    \href{mailto:oscaramog@gmail.com}{\underline{oscaramog@gmail.com}} $|$
-    \href{https://www.linkedin.com/in/oscaramograu/}{\underline{linkedin.com/in/oscaramograu}} $|$
-    \href{https://github.com/amo-grau}{\underline{github.com/amo-grau}}
+  {\Huge \scshape Oscar Amo Grau} \\ \vspace{3pt}
+  \small Robotics Software Engineer $|$ Munich, Germany \\ \vspace{2pt}
+  \small +49 15757815031 $|$
+  \href{mailto:oscaramog@gmail.com}{\underline{oscaramog@gmail.com}} $|$
+  \href{https://www.linkedin.com/in/oscaramograu/}{\underline{linkedin.com/in/oscaramograu}} $|$
+  \href{https://github.com/amo-grau}{\underline{github.com/amo-grau}}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
-  \vspace{2pt}
-  \small{Robotics software engineer in Munich, three years at Yaskawa. Builds and deploys
-  vision-based AI on industrial robots, from training the models to running them on the
-  robot controller. C++, C\# and Python since 2022.}
-  \vspace{4pt}
+\small{Robotics software engineer in Munich, three years at Yaskawa. Builds and deploys
+vision-based AI on industrial robots, from training the models to running them on the
+robot controller. C++, C\# and Python since 2022.}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Robotics Software Engineer}{Sep 2023 -- Present}
-      {Yaskawa Europe GmbH}{Munich, Germany}
-      \resumeItemListStart
-        \resumeItem{Main developer of \textbf{PickAnything}, a
-        \href{https://www.youtube.com/watch?v=cLZ84RRqHHs}{\underline{pick-and-place cell}}
-        combining instance segmentation, grasp detection and collision-aware path planning.}
-        \resumeSubList
-          \resumeSubBullet{Runs in Docker on an NVIDIA Jetson Orin inside the Yaskawa NEXT
-          controller. Handles more than 10 object types and retrains for more.}
-          \resumeSubBullet{Measured: 40\,ms segmentation inference, 5\,ms grasp selection,
-          500\,ms collision environment and planning run in parallel with the operator's
-          selection. Grasp success above 95\% when a path is found; when none exists the
-          cell reports why rather than failing silently.}
-          \resumeSubBullet{Built for Automatica 2025 and since shipped to fairs across
-          Europe. Yaskawa USA built their own copy for the American circuit; a third is
-          being built for the German showroom.}
-          \resumeSubBullet{Integrated the interface, ladder-logic safety and obstacle mesh
-          generation written by others into the working cell.}
-        \resumeSubListEnd
-        \resumeItem{Own the vision-based AI platform other applications build on: training
-        and deploying open-source models for grasp detection, object detection and instance
-        segmentation, in Python, gRPC and ROS, containerised for Jetson boards.}
-        \resumeItem{Review the code of four developers across three projects, and merge to
-        main on each of them. Run informal hexagonal architecture sessions so colleagues can
-        contribute to those codebases.}
-        \resumeItem{Currently training and deploying AI models for OCR, with computer vision
-        work in HALCON.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Robotics Software Engineer}{Sep 2023 -- Present}
+    {Yaskawa Europe GmbH}{Munich, Germany}
+    \resumeItemListStart
+      \resumeItem{Main developer of \textbf{PickAnything}, a
+      \href{https://www.youtube.com/watch?v=cLZ84RRqHHs}{\underline{pick-and-place cell}}
+      combining instance segmentation, grasp detection and collision-aware path planning.}
+      \resumeSubList
+        \resumeSubBullet{Runs in Docker on an NVIDIA Jetson Orin inside the Yaskawa NEXT
+        controller. Handles more than 10 object types and retrains for more.}
+        \resumeSubBullet{Measured: 40\,ms segmentation inference, 5\,ms grasp selection,
+        500\,ms collision environment and planning run in parallel with the operator's
+        selection. Grasp success above 95\% when a path is found; when none exists the
+        cell reports why rather than failing silently.}
+        \resumeSubBullet{Built for Automatica 2025 and since shipped to fairs across
+        Europe. Yaskawa USA built their own copy for the American circuit; a third is
+        being built for the German showroom.}
+        \resumeSubBullet{Integrated the interface, ladder-logic safety and obstacle mesh
+        generation written by others into the working cell.}
+      \resumeSubListEnd
+      \resumeItem{Own the vision-based AI platform other applications build on: training
+      and deploying open-source models for grasp detection, object detection and instance
+      segmentation, in Python, gRPC and ROS, containerised for Jetson boards.}
+      \resumeItem{Review the code of four developers across three projects, and merge to
+      main on each of them. Run informal hexagonal architecture sessions so colleagues can
+      contribute to those codebases.}
+      \resumeItem{Currently training and deploying AI models for OCR, with computer vision
+      work in HALCON.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Working Student, Chair for Neuro-prosthetics}{Apr 2023 -- Jul 2023}
-      {TUM, Technical University of Munich}{Munich, Germany}
-      \resumeItemListStart
-        \resumeItem{Configured a Franka Emika Panda arm and wrote a C++ API that made
-        trajectory control usable by the rest of the lab.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Working Student, Chair for Neuro-prosthetics}{Apr 2023 -- Jul 2023}
+    {TUM, Technical University of Munich}{Munich, Germany}
+    \resumeItemListStart
+      \resumeItem{Configured a Franka Emika Panda arm and wrote a C++ API that made
+      trajectory control usable by the rest of the lab.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Working Student, Chair for Construction Robotics}{Mar 2022 -- Feb 2023}
-      {TUM, Technical University of Munich}{Munich, Germany}
-      \resumeItemListStart
-        \resumeItem{Automated an industrial assembly process: a pick-and-place routine for a
-        UR10 manipulator driven by ROS in C++ and Python, coordinated with a Beckhoff PLC in
-        Structured Text.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Working Student, Chair for Construction Robotics}{Mar 2022 -- Feb 2023}
+    {TUM, Technical University of Munich}{Munich, Germany}
+    \resumeItemListStart
+      \resumeItem{Automated an industrial assembly process: a pick-and-place routine for a
+      UR10 manipulator driven by ROS in C++ and Python, coordinated with a Beckhoff PLC in
+      Structured Text.}
+    \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {TUM, Technical University of Munich}{Munich, Germany}
-      {MSc. Mechatronics and Robotics}{Oct 2021 -- Sep 2023}
-    \resumeSubheading
-      {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
-      {MSc. Industrial Engineering}{Sep 2020 -- Sep 2023}
-    \resumeSubheading
-      {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
-      {Bachelor, Industrial Engineering}{Sep 2015 -- Jun 2020}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {TUM, Technical University of Munich}{Munich, Germany}
+    {MSc. Mechatronics and Robotics}{Oct 2021 -- Sep 2023}
+  \resumeSubheading
+    {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
+    {MSc. Industrial Engineering}{Sep 2020 -- Sep 2023}
+  \resumeSubheading
+    {ETSEIB, UPC, Universitat Politècnica de Catalunya}{Barcelona, Spain}
+    {Bachelor, Industrial Engineering}{Sep 2015 -- Jun 2020}
+\resumeSubHeadingListEnd
 
 %-----------TRAINING-----------
 \section{Training and Courses}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Hexagonal Architecture}{: one-week training with Alistair Cockburn, who created the pattern (May 2026)} \\
-     \textbf{Machine Vision Lighting}{: LUMIMAX (Jun 2026)} \hspace{6pt} $|$ \hspace{6pt}
-     \textbf{HALCON}{: one-week training (May 2026)} \\
-     \textbf{Courses}{: Robotics Fundamentals, NVIDIA; Computer Vision and Image Processing, IBM; ROS Basics in 5 Days (C++), The Construct; Leadership in Organizations, LSE}
-    }}
- \end{itemize}
+\resumeBlockStart
+  \resumeBlockLine{Hexagonal Architecture}{one-week training with Alistair Cockburn, who
+    created the pattern (May 2026)}
+  \resumeBlockLine{Machine Vision Lighting}{LUMIMAX (Jun 2026). \textbf{HALCON}: one-week
+    training (May 2026)}
+  \resumeBlockLine{Courses}{Robotics Fundamentals, NVIDIA; Computer Vision and Image
+    Processing, IBM; ROS Basics in 5 Days (C++), The Construct; Leadership in
+    Organizations, LSE}
+\resumeBlockEnd
 
 %-----------SKILLS-----------
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: C++, Python, C\#, Java} \\
-     \textbf{Robotics and AI}{: ROS, PyTorch, ONNX, OpenCV, gRPC, HALCON, OCR} \\
-     \textbf{Platforms and Tools}{: Docker, NVIDIA Jetson Orin, Yaskawa NEXT, NVIDIA Isaac Sim, Git, Beckhoff PLC} \\
-     \textbf{Practices}{: test-driven development, hexagonal architecture, SOLID, design patterns, code review} \\
-     \textbf{Spoken Languages}{: Spanish (native), Catalan (native), English (C1), German (B2)}
-    }}
- \end{itemize}
+\resumeBlockStart
+  \resumeBlockLine{Programming Languages}{C++, Python, C\#, Java}
+  \resumeBlockLine{Robotics and AI}{ROS, PyTorch, ONNX, OpenCV, gRPC, HALCON, OCR}
+  \resumeBlockLine{Platforms and Tools}{Docker, NVIDIA Jetson Orin, Yaskawa NEXT, NVIDIA
+    Isaac Sim, Git, Beckhoff PLC}
+  \resumeBlockLine{Practices}{test-driven development, hexagonal architecture, SOLID,
+    design patterns, code review}
+  \resumeBlockLine{Spoken Languages}{Spanish (native), Catalan (native), English (C1),
+    German (B2)}
+\resumeBlockEnd
 
 \end{document}

@@ -109,6 +109,14 @@ reduced to plain text. Concretely:
   prints is roughly what the filter reads. Run it after any structural change and
   actually read the output. If a heading, date or contact detail is missing,
   garbled, or out of order there, the filter sees the same damage.
+- `build.sh` also writes `<doc>/build/main.txt`, the same extraction run through
+  `reflow.py` so wrapped lines are joined back into sentences. That is the file
+  to paste into an application form or an AI tool. Note what it cannot fix: a PDF
+  stores text one visual line at a time, so copying from a PDF viewer will always
+  break lines mid-sentence. That is PDF, not the template — do not try to solve it
+  in the LaTeX source. PDF tagging (`\DocumentMetadata{testphase=phase-III}`) was
+  tried and rejected: it still breaks lines, emits a stray bullet before each job
+  title, and pushes the CV to two pages.
 - Keep `\pdfgentounicode=1` in the CV so glyphs map back to real characters.
 - Use **standard section headings** — Experience, Education, Skills, Projects.
   Parsers match on these literally; inventive headings get dropped.
@@ -125,6 +133,14 @@ reduced to plain text. Concretely:
   either form.
 - Structural changes belong in `base/`. Never restructure a single application's
   copy and leave `base/` behind.
+
+**Spacing in `base/cv/main.tex`.** Every vertical gap comes from four lengths
+(`\entrysep`, `\bulletsep`, `\headgap`, `\blocksep`) and from `enumitem` keys on
+the list macros. There are no manual `\vspace` corrections in the document, and
+none should be added: the original template compensated for its own layout with
+scattered negative `\vspace` values, which is why gaps between entries were
+uneven. If something is too tight or too loose, change a length; if the page
+overflows, cut content rather than shrinking the spacing further.
 
 ## 3. Specialized job applications
 
