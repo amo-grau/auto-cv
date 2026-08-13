@@ -75,6 +75,15 @@ asks otherwise, but this is the default order.
   letter. Describe the scope — ownership, code review, merge authority, teaching —
   and let it speak for itself. Do not reintroduce this on a later pass.
 
+**Held back from the default CV, but reintroduce when the posting rewards it:**
+
+- **The PickAnything latency and success figures** (40 ms segmentation, 5 ms grasp
+  selection, 500 ms planning, >95% grasp success when a path is found). Removed
+  from `base/cv/` on 12.08.2026 as too specific for a general reader. They remain
+  the only hard measurements in the inventory, so bring them back for anything
+  about real-time systems, edge inference, performance engineering, or where the
+  posting itself is written in numbers. Full detail in `experience.md`.
+
 **Rarely select:**
 
 - Smart welding and palletizing — only for welding, logistics or C#/.NET roles.
