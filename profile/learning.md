@@ -16,9 +16,16 @@ rather than a list of old certificates.
 
 - **Tags:** hexagonal-architecture, ports-and-adapters, software-architecture,
   design, training
-- **When:** 18.05.2026, one week
+- **When:** 18.05.2026, one day
 
-Trained in hexagonal architecture by **Alistair Cockburn, who created it**.
+Trained in hexagonal architecture by **Alistair Cockburn, who created it**. One day
+(corrected 13.08.2026 — earlier recorded as a week).
+
+**Do not state the duration** on the CV or in the letter. Who taught it is the
+whole point; a day-long course is no less true and no less credible, but naming
+the length invites the reader to weigh the hours instead of the source. For the
+same reason the HALCON training now carries no duration either — "one-week HALCON"
+next to an unqualified Cockburn line made the wrong one look bigger.
 
 This is the single most credible line in the whole learning file, and it should
 almost never be cut. It is not a certificate — it ties directly to work he does:
@@ -26,12 +33,13 @@ he applies hexagonal architecture at Yaskawa and runs sessions teaching it to
 other developers so they can contribute to his projects. Trained by the originator,
 applies it, teaches it. That sequence is worth stating as a sequence.
 
-### HALCON — one-week training
+### HALCON training
 
 - **Tags:** halcon, machine-vision, mvtec, training
-- **When:** 04.05.2026
+- **When:** 04.05.2026, one week
 
-One week of instructor-led HALCON training. **Select with care** — see the note on
+One week of instructor-led HALCON training. Duration is not stated on the
+documents — see the note above. **Select with care** — see the note on
 HALCON positioning below.
 
 ### Machine vision lighting — LUMIMAX
@@ -58,15 +66,15 @@ Note the spelling: **lighting**, not lightning.
 | Robotics Fundamentals Learning Path | NVIDIA | ? | robotics, isaac-sim, nvidia |
 | Introduction to Computer Vision and Image Processing | IBM | ? | computer-vision, image-processing |
 | ROS Basics in 5 Days (C++) | The Construct | ? | ros, c++ |
+| Leadership in Organizations | London School of Economics | ? | leadership, management, soft-skills |
+
+Completion dates are unknown — see `_gaps.md`.
 
 **"ROS Basics in 5 Days" is deliberately off the default CV** (12.08.2026): a
 five-day beginner course reads as simple next to three years of shipping ROS
 systems, and it invites a reader to size his ROS experience by the course rather
 than by the work. The ROS evidence is in the experience section. Kept here in case
 a posting ever wants the certificate itself.
-| Leadership in Organizations | London School of Economics | ? | leadership, management, soft-skills |
-
-Completion dates are unknown — see `_gaps.md`.
 
 ## Books read
 
