@@ -58,6 +58,12 @@ Note the spelling: **lighting**, not lightning.
 | Robotics Fundamentals Learning Path | NVIDIA | ? | robotics, isaac-sim, nvidia |
 | Introduction to Computer Vision and Image Processing | IBM | ? | computer-vision, image-processing |
 | ROS Basics in 5 Days (C++) | The Construct | ? | ros, c++ |
+
+**"ROS Basics in 5 Days" is deliberately off the default CV** (12.08.2026): a
+five-day beginner course reads as simple next to three years of shipping ROS
+systems, and it invites a reader to size his ROS experience by the course rather
+than by the work. The ROS evidence is in the experience section. Kept here in case
+a posting ever wants the certificate itself.
 | Leadership in Organizations | London School of Economics | ? | leadership, management, soft-skills |
 
 Completion dates are unknown — see `_gaps.md`.
@@ -78,8 +84,21 @@ Patterns: *Design Patterns*, *Head First Design Patterns*.
 Craft and profession: *Clean Code*, *The Clean Coder*, *The Pragmatic Programmer*.
 
 > On the CV this list is too long to carry its own weight — eleven titles reads as
-> filler. Prefer naming two or three, or folding it into a single line about
+> filler. Prefer naming three or four, or folding it into a single line about
 > deliberate practice. The full list stays here.
+
+**Selected for the default CV (12.08.2026):** *Refactoring*; *Growing
+Object-Oriented Software, Guided by Tests*; *Domain-Driven Design*; *Clean
+Architecture*.
+
+Chosen to cover four distinct things rather than four books on the same subject —
+refactoring, testing, modelling, architecture — and to line up with what he
+actually does: the Practices line on the CV, and the hexagonal architecture he
+applies and teaches. *Growing Object-Oriented Software* is the deliberate pick of
+the four: it is the one that a reader who knows the field will recognise as an
+insider's choice rather than a list of famous titles.
+
+Swap freely per posting. The rest of the list stays available above.
 
 ## Positioning: HALCON
 
