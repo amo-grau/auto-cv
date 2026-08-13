@@ -15,23 +15,33 @@ attaching a year to individual languages: the record only supports C++ from
 "C# since 2022" would be wrong. Python goes back furthest — it appears in the
 TRANE internship in 2020.
 
-## Frameworks and libraries
+## Robotics and AI
 
-- **Tags:** ros, grpc, pytorch, onnx, opencv, halcon, ocr, machine-vision-lighting,
-  pandas, numpy, matplotlib
+- **Tags:** ros, isaac-sim, pytorch, onnx, opencv, halcon, ocr,
+  machine-vision-lighting
 
-ROS, gRPC, PyTorch, ONNX, OpenCV, HALCON, pandas, NumPy, Matplotlib.
+ROS, NVIDIA Isaac Sim, PyTorch, ONNX, OpenCV, HALCON, OCR.
 
 Machine vision beyond the model: trained in industrial lighting and illumination
 (LUMIMAX, 06.2026), which most vision engineers never cover.
 
+## General-purpose libraries
+
+- **Tags:** grpc, pandas, numpy, matplotlib
+
+gRPC, pandas, NumPy, Matplotlib.
+
+gRPC belongs here rather than under robotics: it is general-purpose RPC that
+happens to carry the traffic between PickAnything's components. Isaac Sim is the
+robotics tool and belongs in the group above.
+
 ## Tools and platforms
 
-- **Tags:** docker, git, isaac-sim, jetson, jetson-orin, yaskawa-next, vs-code,
+- **Tags:** docker, git, jetson, jetson-orin, yaskawa-next, vs-code,
   visual-studio, jupyter, beckhoff, plc, ladder-logic, mysql
 
-Docker, Git, NVIDIA Isaac Sim, NVIDIA Jetson (including Jetson Orin), Yaskawa NEXT
-controller, VS Code, Visual Studio, Jupyter Notebooks, Beckhoff PLC, MySQL.
+Docker, Git, NVIDIA Jetson (including Jetson Orin), Yaskawa NEXT controller, VS
+Code, Visual Studio, Jupyter Notebooks, Beckhoff PLC, MySQL.
 
 Reads and integrates with ladder logic (Yaskawa's PLC-style programming) without
 writing it — see the PickAnything safety components in `experience.md`.
