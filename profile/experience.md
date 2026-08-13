@@ -18,6 +18,18 @@ Official title is **Robotics Software Engineer**; no promotion since joining.
 Confirmed 08.2026 — the old CV said "Backend robotics software developer" and the
 letter said "Software Developer", both wrong.
 
+### Where his time actually goes (as of 08.2026)
+
+Confirmed 13.08.2026, and worth keeping current — it decides how a letter is
+framed.
+
+- **Now:** training and deploying AI models for robotics projects. The
+  vision-based AI platform and the OCR project are where the work is.
+- **PickAnything is in maintenance.** It remains his biggest project so far and
+  the strongest single item on the CV, but he is no longer building it. Do not
+  write "most of my time goes to PickAnything" or anything implying it is current
+  development — say "biggest project so far", and that he now maintains it.
+
 ### Ownership and technical leadership
 
 Holds a senior's responsibilities without the senior title. Worth stating on a CV
