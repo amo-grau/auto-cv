@@ -1,4 +1,4 @@
-I would like to apply for the \position role at \company. I am a robotics software
+I would like to apply for the \position{} role at \company. I am a robotics software
 engineer at Yaskawa Europe in Munich, where I build vision-based AI for industrial
 robots and get it running on the machines themselves.
 
@@ -8,10 +8,7 @@ detection and collision-aware path planning, and runs in a Docker container on a
 NVIDIA Jetson Orin inside the Yaskawa NEXT controller. It handles more than ten
 kinds of object and can be retrained for others. We built it for Automatica 2025.
 It has since travelled to fairs across Europe, Yaskawa USA built their own copy for
-the American circuit, and a third is being assembled for our showroom in Germany. I
-did not write all of it — colleagues built the interface, the ladder-logic safety
-and the obstacle mesh generation — and a good part of my job was making those parts
-work as one machine.
+the American circuit, and a third is being assembled for our showroom in Germany.
 
 I also own the vision-based AI platform our other applications build on: training
 open-source models, deploying them, and containerising them for the robot
@@ -23,5 +20,11 @@ Last May I spent a week in a hexagonal architecture training with Alistair
 Cockburn, and I work test-first. Structure is the part of this job I care most
 about. I would rather leave behind code someone else can change than code only I
 understand.
+
+% Why this company, specifically. Set \whyfit in info.tex — it renders here, and
+% nothing appears when it is empty. This is the paragraph that cannot be reused
+% between applications; anything that could be sent to two companies is worth
+% nothing here.
+\ifdefempty{\whyfit}{}{\whyfit}
 
 I would be glad to talk about the role and about what you are building.

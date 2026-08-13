@@ -63,6 +63,15 @@ The letter splits cleanly: `info.tex` holds the per-application variables
 (`\company`, `\position`, `\team`, `\city`, `\recipient`) and `body.tex` holds the
 prose. Tailoring a letter is mostly editing those two files.
 
+`info.tex` also holds **`\whyfit`**, the one paragraph saying why this company
+specifically. It is empty in `base/` and renders nothing while empty. Write it
+fresh for every application, and hold it to one test: if the paragraph could be
+sent to another company unchanged, it is worth nothing. Everything else in the
+letter is reusable; this is the part that is not.
+
+A LaTeX trap worth remembering: `\position role` renders as "Engineerrole",
+because LaTeX eats the space after a control word. Write `\position{} role`.
+
 ---
 
 # The five modes

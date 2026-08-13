@@ -70,8 +70,16 @@ CV: edit `applications/<slug>/cv/main.tex`.
 
 Letter: edit `applications/<slug>/letter/info.tex` — set `\company` and
 `\position` always; set `\team`, `\city` and `\recipient` only when the posting
-actually names them. Then edit `body.tex` so the opening names the role, and the
-middle paragraphs address what this posting actually asks for.
+actually names them. Then edit `body.tex` so the middle paragraphs address what
+this posting actually asks for.
+
+**`\whyfit` is the paragraph that matters.** It is empty in `base/` and must be
+written fresh for every application. Point at something real and specific — the
+product, the problem they describe, the stack, how they say they work — and
+connect it to something already true in `profile/`. Then read it back and ask
+whether it could be sent to a different company. If it could, it is worth nothing:
+delete it and write a sharper one. A letter without this paragraph is a form
+letter with the company name substituted in, and reads like one.
 
 Write in the voice defined in `CLAUDE.md` — formal, plain, specific. No enthusiasm
 boilerplate, no marketing adjectives, no closing sentence that restates the letter.
