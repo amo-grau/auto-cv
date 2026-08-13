@@ -313,20 +313,33 @@ Raised and deliberately left alone — the owner has not decided on them. Do not
 these silently as a side effect of other work; they change the documents the owner
 actually sends.
 
-**Letter, ATS (mode 2).** Its contact details are encoded next to `fontawesome5`
-icons and extract as `#` and `*`, so a parser reading the letter finds no email or
-phone. The letter is also justified and hyphenates, splitting keywords across
-lines (`de-veloping` no longer matches `developing`).
+**Letter, ATS (mode 2).** Fixed 13.08.2026:
+
+- The name was set in small caps, which in this font extracted letter by letter as
+  `O SCAR A MO G RAU` — a parser looking for the candidate's name found nothing.
+  Small caps removed. **This was the worst defect in either document** and it went
+  unnoticed for several passes because the PDF looked correct.
+- Hyphenation is off (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`, `\sloppy`),
+  so keywords are no longer split across lines. The text stays justified.
+- `\pdfgentounicode=1` added, matching the CV.
+
+An earlier note here claimed a parser finds no email or phone in the letter. That
+was wrong: the `fontawesome5` icons extract as `#` and `*`, but the address and
+number beside them extract as plain text and always did. The stray `#` and `*` are
+cosmetic and are left alone.
 
 **CV, ATS (mode 2).** Fixed 12.08.2026 — dates now read `Sep 2023`, headings are
 standard (Summary, Experience, Education, Training and Courses, Skills), and a
 summary line leads the document. Keep it that way.
 
-**Letter, voice.** `base/letter/body.tex` predates the Voice section and breaks it
-in several places: "state-of-the-art", "deeply committed", "I am excited about the
-opportunity to contribute my technical skills and my global mindset", and a fifth
-paragraph whose two sentences say the same thing with no information in either.
-Paragraphs 2 and 3 are the good ones — they contain real systems and real work.
+**Letter, voice.** Rewritten 13.08.2026 against the Voice section and the current
+inventory. The old text opened with "I am writing to express my interest", claimed
+"state-of-the-art vision-based robotics", said "deeply committed", closed with "I
+am excited about the opportunity to contribute my technical skills and my global
+mindset", and carried a paragraph whose two sentences repeated each other. None of
+that survives. Keep it that way: the letter now names real systems, real hardware
+and real adoption, which is what makes it read as written by the person who did
+the work.
 
 **Content.** Largely addressed by the 12.08.2026 interview and CV rewrite. The
 older roles (welding, Franka API, Construction Robotics, TRANE) still carry no

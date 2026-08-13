@@ -11,6 +11,16 @@
 \usepackage{eso-pic}
 \usepackage{charter}
 
+% Keywords must survive extraction whole: a word split as "de-veloping" no longer
+% matches "developing" in a keyword filter. The text stays justified; \sloppy lets
+% TeX stretch the spacing instead of hyphenating.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+% Map glyphs back to real characters so the PDF extracts as text
+\pdfgentounicode=1
+
 \addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 \definecolor{gr}{RGB}{225,225,225}
@@ -27,7 +37,7 @@
 
 % Header
 \begin{center}
-{\fontsize{28}{0}\selectfont\scshape \myname}
+{\fontsize{28}{0}\selectfont \myname}
 
 \href{mailto:\myemail}{\faEnvelope\enspace \myemail}\hfill
 \href{tel:\myphone}{\faPhone\enspace \myphone}\hfill
