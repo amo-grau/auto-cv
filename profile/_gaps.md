@@ -39,11 +39,15 @@ Applies to CVs, letters and interviews alike.
 - **Teaching hexagonal architecture.** Answered: informal sessions, to help others
   contribute to his projects. Still open — how many people attended, and is any of
   it written down and still in use?
-- **How much C++ does he write today?** The CV will claim C++ across three roles
-  and four years, which is true by the timeline. But the recent Yaskawa work named
-  so far is mostly Python, gRPC and ROS, with C++ on the inference container. If a
-  C++-heavy employer asks "what did you write in C++ this year", there needs to be
-  an answer. What is the current split?
+- **How much C++ and C# does he write today?** The summary says "programming since
+  2021, in C++, Python and C#", which the timeline supports. But the recent Yaskawa
+  work described so far is mostly Python, gRPC and ROS, with C++ on the inference
+  container and C# only on the older welding applications. If an employer asks
+  "what did you write in C++ — or C# — this year", there needs to be an answer.
+  What is the current split?
+- **C# has no evidence on the default CV.** It appears in the summary and in
+  Skills, but the welding bullet that demonstrates it was cut for space. Either
+  reintroduce that bullet for C#-relevant postings, or expect the question.
 - **Smart palletizing** — the letter mentions it, the CV does not. Own project or
   contribution to someone else's? Worth its own bullet?
 - **Master's thesis grade or distinction**, if notable.

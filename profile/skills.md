@@ -9,6 +9,12 @@ what the posting asks for.
 
 C++, Python, C#, Java, HTML and CSS.
 
+**Programming since 2021** (confirmed 12.08.2026). Say it that way rather than
+attaching a year to individual languages: the record only supports C++ from
+03.2022 (Construction Robotics) and C# from 09.2023 (Yaskawa welding work), so
+"C# since 2022" would be wrong. Python goes back furthest — it appears in the
+TRANE internship in 2020.
+
 ## Frameworks and libraries
 
 - **Tags:** ros, grpc, pytorch, onnx, opencv, halcon, ocr, machine-vision-lighting,
